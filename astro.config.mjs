@@ -6,5 +6,6 @@ import tailwind from "@astrojs/tailwind"
 export default defineConfig({
 	integrations: [tailwind()],
 	site: "https://wai-lin.github.io",
+	base: "wai-lin"
 })
 
