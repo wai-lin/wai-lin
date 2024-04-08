@@ -1,0 +1,237 @@
+---
+import "@fortawesome/fontawesome-free/css/all.min.css"
+
+import LeftSideArticle from "../components/LeftSideArticle.astro"
+
+const resume: Partial<ResumeJson> = {
+	name: "Wai Lin Aung",
+	positionAppliedFor: "Senior FrontEnd Developer",
+
+	personalInfo: {
+		dateOfBirth: "20, 05, 1998",
+		nationality: "Myanmar",
+		religion: "Buddhism",
+		maritalStatus: "single",
+	},
+
+	contactInfo: {
+		phone: ["+959252151445"],
+		email: ["wailin.wilbert@gmail.com"],
+		links: [
+			{
+				icon: "fa-brands fa-github",
+				label: "github/wai-lin",
+				url: "https://github.com/wai-lin",
+			},
+		],
+	},
+
+	skills: {
+		jobRelated: [
+			"HTML",
+			"CSS",
+			"TailwindCss",
+			"JavaScript",
+			"TypeScript",
+			"React.JS",
+			"Vue.JS",
+			"Astro.JS",
+			"Next.JS",
+			"Nuxt.JS",
+			"AWS Lightsail",
+			"AWS Amplify",
+			"Docker",
+			"Firebase",
+		],
+		nonJobRelated: [],
+	},
+
+	educationHistory: [
+		{
+			schoolName: "University of Computer Studies, Yangon",
+			educationTitle: "B.C.Sc (Bachelor of Computer Science)",
+			fromYear: "2014",
+			toYear: "2019",
+			note: "",
+		},
+	],
+
+	spokenLanguage: [
+		{
+			label: "Myanmar",
+			proficiency: "First Language",
+		},
+		{
+			label: "English",
+			proficiency: "Intermediate",
+		},
+	],
+
+	biography: "",
+}
+---
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		/>
+
+		<title>Resume</title>
+
+		<script>
+			const printBtn = document.getElementById("print-resume")!
+			const resume = document.getElementById("resume")!
+
+			printBtn.addEventListener("click", () => {
+				printBtn.classList.add("hidden")
+				resume.classList.remove("container")
+				window.print()
+			})
+
+			window.addEventListener("focus", () => {
+				if (printBtn.classList.contains("hidden")) printBtn.classList.remove("hidden")
+				if (!resume.classList.contains("container")) resume.classList.add("container")
+			})
+		</script>
+	</head>
+
+	<body class="font-body">
+		<header class="flex items-center justify-center py-2">
+			<button
+				id="print-resume"
+				class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
+			>
+				Print
+			</button>
+		</header>
+
+		<main id="resume" class="container mx-auto text-xs">
+			<!-- Header -->
+			<section class="flex justify-between items-start border-b-2 border-slate-800 pb-4">
+				<div>
+					<h1 class="text-3xl mb-4">{resume.name}</h1>
+					<h3 class="text-xl">{resume.positionAppliedFor}</h3>
+				</div>
+
+				<div class="max-h-[120px]">
+					<img
+						src="/profile/transparent-background.png"
+						aria-hidden
+						class="object-cover object-center w-[120px] h-[120px] rounded-full border-2 border-slate-800"
+					/>
+				</div>
+			</section>
+
+			<section class="mt-4 grid grid-cols-6">
+				<!-- Left Side -->
+				<div class="space-y-4 col-span-2">
+					<LeftSideArticle title="Personal Information">
+						<div class="flex flex-col gap-2 flex-wrap">
+							<p>
+								<b>Date of Birth : </b>
+								<span>{resume.personalInfo?.dateOfBirth}</span>
+							</p>
+
+							<p>
+								<b>Nationality : </b>
+								<span>{resume.personalInfo?.nationality}</span>
+							</p>
+
+							<p>
+								<b>Religion : </b>
+								<span>{resume.personalInfo?.religion}</span>
+							</p>
+
+							<p>
+								<b>Marital Status : </b>
+								<span class="capitalize">{resume.personalInfo?.maritalStatus}</span>
+							</p>
+						</div>
+					</LeftSideArticle>
+
+					<LeftSideArticle title="Contact">
+						<div class="flex flex-col gap-2">
+							{
+								resume.contactInfo?.phone.map((phone) => (
+									<a href={`tel:${phone}`} class="flex items-center gap-4 hover:text-blue-600">
+										<i class="fa-solid fa-phone" />
+										<span>{phone}</span>
+									</a>
+								))
+							}
+
+							{
+								resume.contactInfo?.email.map((email) => (
+									<a href={`mailto:${email}`} class="flex items-center gap-4 hover:text-blue-600">
+										<i class="fa-regular fa-envelope" />
+										<span>{email}</span>
+									</a>
+								))
+							}
+
+							{
+								resume.contactInfo?.links.map(({ icon, label, url }) => (
+									<a href={url} class="flex items-center gap-4 hover:text-blue-600">
+										{icon ? <i class={icon} /> : <i class="fa-solid fa-link" />}
+										<span>{label}</span>
+									</a>
+								))
+							}
+						</div>
+					</LeftSideArticle>
+
+					<LeftSideArticle title="Skills">
+						<div class="pl-4">
+							<ul class="list-disc">
+								{resume.skills?.jobRelated.map((skill) => <li>{skill}</li>)}
+							</ul>
+						</div>
+					</LeftSideArticle>
+
+					<LeftSideArticle title="Educations">
+						<div class="flex flex-col gap-4">
+							{
+								resume?.educationHistory?.map(
+									({ schoolName, educationTitle, fromYear, toYear }) => (
+										<article>
+											<h6 class="text-base">
+												<span>{schoolName}</span>
+												<small>
+													({fromYear} - {toYear})
+												</small>
+											</h6>
+											<p>{educationTitle}</p>
+										</article>
+									),
+								)
+							}
+						</div>
+					</LeftSideArticle>
+
+					<LeftSideArticle title="Languages">
+						<ul class="flex flex-col gap-4">
+							{
+								resume?.spokenLanguage?.map(({ label, proficiency }) => (
+									<li>
+										<b>{label} : </b>
+										<span>{proficiency}</span>
+									</li>
+								))
+							}
+						</ul>
+					</LeftSideArticle>
+				</div>
+
+				<!-- Right Side -->
+				<div class="col-span-4"></div>
+			</section>
+		</main>
+	</body>
+</html>
