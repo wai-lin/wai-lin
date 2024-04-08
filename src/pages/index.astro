@@ -1,9 +1,28 @@
 ---
+import "@fortawesome/fontawesome-free/css/all.min.css"
+
 import { resume } from "../content/resume/data"
 
 import Layout from "../components/Layout.astro"
 
 const openToWork = false
+const links = [
+	{
+		icon: "fa-brands fa-github",
+		label: "Github",
+		url: "https://github.com/wai-lin",
+	},
+	{
+		icon: "fa-brands fa-linkedin",
+		label: "LinkedIn",
+		url: "https://www.linkedin.com/in/wailin-aung/",
+	},
+	{
+		icon: "fa-regular fa-newspaper",
+		label: "Resume",
+		url: "/wai-lin/resume",
+	},
+]
 ---
 
 <Layout>
@@ -20,16 +39,24 @@ const openToWork = false
 				<p
 					class="max-w-[600px] text-center text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
 				>
-					I build beautiful and performant web experiences. Also create some JS libraries as a
-					hobby.
+					I build beautiful and performant web experiences.
+					<br />
+					Also create some JS libraries as a hobby.
 				</p>
 
-				<p>
-					<span>Checkout my</span>
-					<a href="/wai-lin/resume" class="text-blue-700 hover:text-blue-800 hover:underline">
-						resume.
-					</a>
-				</p>
+				<div class="flex flex-wrap items-center gap-4">
+					{
+						links.map(({ url, icon, label }) => (
+							<a
+								href={url}
+								class="text-blue-600 pr-4 border-r border-slate-400 last-of-type:border-r-0 last-of-type:pr-0 hover:text-blue-700 hover:underline"
+							>
+								<i class={icon} />
+								<span>{label}</span>
+							</a>
+						))
+					}
+				</div>
 			</div>
 		</main>
 	</body>

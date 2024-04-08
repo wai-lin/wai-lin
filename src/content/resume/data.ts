@@ -23,6 +23,11 @@ export const resume: ResumeJson = {
 				label: "github/wai-lin",
 				url: "https://github.com/wai-lin",
 			},
+			{
+				icon: "fa-brands fa-linkedin",
+				label: "linkedin/wailin-aung",
+				url: "https://www.linkedin.com/in/wailin-aung/",
+			},
 		],
 	},
 
