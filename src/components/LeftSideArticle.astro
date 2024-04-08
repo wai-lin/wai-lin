@@ -1,11 +1,21 @@
 ---
-const { title, hasBorder = true } = Astro.props
+interface Props {
+	title: string
+	className?: string
+	hasBorder?: boolean
+	visible?: boolean
+}
+const { title, className, hasBorder = true, visible = true } = Astro.props
 
-const borderClass = hasBorder ? "border-b border-slate-400" : ""
+const borderClass = hasBorder ? "border-b border-dashed border-slate-400 " : ""
 ---
 
-<article class={borderClass + " pb-4"}>
-	<h4 class="text-lg mb-4">{title}</h4>
+{
+	visible && (
+		<article class={borderClass + className}>
+			<h4 class="text-lg mb-4 uppercase">{title}</h4>
 
-	<slot />
-</article>
+			<slot />
+		</article>
+	)
+}

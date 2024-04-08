@@ -5,7 +5,11 @@ export default {
 		fontFamily: {
 			body: ["Arvo", "Noto Sans Myanmar", "serif"],
 		},
-		extend: {},
+		extend: {
+			screens: {
+				screen: { raw: "screen" },
+			},
+		},
 	},
 	plugins: [],
 }

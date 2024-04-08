@@ -2,10 +2,15 @@
 import "@fortawesome/fontawesome-free/css/all.min.css"
 
 import LeftSideArticle from "../components/LeftSideArticle.astro"
+import WorkExperience from "../components/WorkExperience.astro"
 
-const resume: Partial<ResumeJson> = {
+const resume: ResumeJson = {
 	name: "Wai Lin Aung",
 	positionAppliedFor: "Senior FrontEnd Developer",
+
+	// NOTE: Ideal character count is `650` characters.
+	biography:
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis pretium nisl, nec commodo est. Fusce laoreet consequat sapien, eu fermentum ex pulvinar eget. Praesent hendrerit nulla in varius pharetra. Fusce facilisis venenatis lacus in lobortis. Fusce vulputate iaculis mauris. Nunc risus arcu, tempor vel dignissim porta, vulputate id quam. Vestibulum pellentesque augue in lobortis ullamcorper. In eleifend nisl faucibus molestie porttitor.   augue in lobortis ullamcorper. In eleifend nisl faucibus molestie porttitor. Praesent hendrerit nulla in varius pharetra. Fusce facilisis venenatis lacus in lobortis.",
 
 	personalInfo: {
 		dateOfBirth: "20, 05, 1998",
@@ -26,25 +31,22 @@ const resume: Partial<ResumeJson> = {
 		],
 	},
 
-	skills: {
-		jobRelated: [
-			"HTML",
-			"CSS",
-			"TailwindCss",
-			"JavaScript",
-			"TypeScript",
-			"React.JS",
-			"Vue.JS",
-			"Astro.JS",
-			"Next.JS",
-			"Nuxt.JS",
-			"AWS Lightsail",
-			"AWS Amplify",
-			"Docker",
-			"Firebase",
-		],
-		nonJobRelated: [],
-	},
+	skills: [
+		"HTML",
+		"CSS",
+		"TailwindCss",
+		"JavaScript",
+		"TypeScript",
+		"React.JS",
+		"Vue.JS",
+		"Astro.JS",
+		"Next.JS",
+		"Nuxt.JS",
+		"AWS Lightsail",
+		"AWS Amplify",
+		"Docker",
+		"Firebase",
+	],
 
 	educationHistory: [
 		{
@@ -67,7 +69,87 @@ const resume: Partial<ResumeJson> = {
 		},
 	],
 
-	biography: "",
+	references: [
+		{
+			personName: "Kyaw Naing Tun",
+			position: "CTO",
+			company: "KLink Myanmar",
+			email: "kyawnainghtun93@gmail.com",
+			phone: "+959123456",
+		},
+		{
+			personName: "Kyaw Naing Tun",
+			position: "CTO",
+			company: "KLink Myanmar",
+			email: "kyawnainghtun93@gmail.com",
+			phone: "+959123456",
+		},
+	],
+
+	workExperiences: [
+		{
+			companyName: "KLink Myanmar",
+			companyUrl: "https://www.klink.cloud",
+			assignedPosition: "Lead Software Enginner",
+			fromDate: "June 2023",
+			toDate: "Present",
+			descriptions: [],
+		},
+
+		{
+			companyName: "KBZ Bank",
+			companyUrl: "https://kbzbank.com",
+			assignedPosition: "Senior FrontEnd Enginner",
+			fromDate: "Nov 2021",
+			toDate: "May 2023",
+			descriptions: [],
+		},
+
+		{
+			companyName: "Nexlabs",
+			companyUrl: "https://nexlabs.co",
+			assignedPosition: "Senior FrontEnd Developer",
+			fromDate: "Apr 2021",
+			toDate: "Oct 2021",
+			descriptions: [],
+		},
+
+		{
+			companyName: "Nexlabs",
+			companyUrl: "https://nexlabs.co",
+			assignedPosition: "FrontEnd Web Developer",
+			fromDate: "Jul 2019",
+			toDate: "Apr 2021",
+			descriptions: [],
+		},
+
+		{
+			companyName: "Nexlabs",
+			companyUrl: "https://nexlabs.co",
+			assignedPosition: "Internship",
+			fromDate: "Sep 2018",
+			toDate: "Nov 2018",
+			descriptions: [],
+		},
+
+		{
+			companyName: "Nexlabs",
+			companyUrl: "https://nexlabs.co",
+			assignedPosition: "Internship",
+			fromDate: "Sep 2017",
+			toDate: "Nov 2017",
+			descriptions: [],
+		},
+
+		{
+			companyName: "NewsWest Minister Institude",
+			companyUrl: "https://www.facebook.com/NewWestInstitute/?_rdc=1&_rdr",
+			assignedPosition: "Internship",
+			fromDate: "Sep 2016",
+			toDate: "Nov 2016",
+			descriptions: [],
+		},
+	],
 }
 ---
 
@@ -87,23 +169,20 @@ const resume: Partial<ResumeJson> = {
 
 		<script>
 			const printBtn = document.getElementById("print-resume")!
-			const resume = document.getElementById("resume")!
 
 			printBtn.addEventListener("click", () => {
-				printBtn.classList.add("hidden")
-				resume.classList.remove("container")
-				window.print()
-			})
+				alert(
+					`IMPORTANT: Please enable "Background graphics" options in "Advanced Settings".
 
-			window.addEventListener("focus", () => {
-				if (printBtn.classList.contains("hidden")) printBtn.classList.remove("hidden")
-				if (!resume.classList.contains("container")) resume.classList.add("container")
+NOTE: Print experience is only optimized for Chrome Browser. If you're using other browsers this feature might not work well.`,
+				)
+				window.print()
 			})
 		</script>
 	</head>
 
 	<body class="font-body">
-		<header class="flex items-center justify-center py-2">
+		<header class="flex items-center justify-center py-2 print:hidden">
 			<button
 				id="print-resume"
 				class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
@@ -112,9 +191,9 @@ const resume: Partial<ResumeJson> = {
 			</button>
 		</header>
 
-		<main id="resume" class="container mx-auto text-xs">
+		<main class="text-xs screen:container screen:mx-auto">
 			<!-- Header -->
-			<section class="flex justify-between items-start border-b-2 border-slate-800 pb-4">
+			<section class="flex justify-between items-start border-b border-slate-800 pb-4 px-4">
 				<div>
 					<h1 class="text-3xl mb-4">{resume.name}</h1>
 					<h3 class="text-xl">{resume.positionAppliedFor}</h3>
@@ -129,38 +208,53 @@ const resume: Partial<ResumeJson> = {
 				</div>
 			</section>
 
-			<section class="mt-4 grid grid-cols-6">
-				<!-- Left Side -->
-				<div class="space-y-4 col-span-2">
-					<LeftSideArticle title="Personal Information">
+			<section class="grid grid-cols-6 gap-4">
+				<!-- NOTE: bg-slate-100 -->
+				<div class="pt-4 px-4 col-span-2" style="background:#f1f5f9;">
+					<LeftSideArticle title="Personal Information" className="pb-4 h-full">
 						<div class="flex flex-col gap-2 flex-wrap">
 							<p>
 								<b>Date of Birth : </b>
-								<span>{resume.personalInfo?.dateOfBirth}</span>
+								<span>{resume.personalInfo.dateOfBirth}</span>
 							</p>
 
 							<p>
 								<b>Nationality : </b>
-								<span>{resume.personalInfo?.nationality}</span>
+								<span>{resume.personalInfo.nationality}</span>
 							</p>
 
 							<p>
 								<b>Religion : </b>
-								<span>{resume.personalInfo?.religion}</span>
+								<span>{resume.personalInfo.religion}</span>
 							</p>
 
 							<p>
 								<b>Marital Status : </b>
-								<span class="capitalize">{resume.personalInfo?.maritalStatus}</span>
+								<span class="capitalize">{resume.personalInfo.maritalStatus}</span>
 							</p>
 						</div>
 					</LeftSideArticle>
+				</div>
 
-					<LeftSideArticle title="Contact">
+				<article class="col-span-4 border-b border-dashed border-slate-400 py-4">
+					<h4 class="text-lg uppercase mb-4">Profile</h4>
+					<p class="leading-relaxed">{resume.biography}</p>
+				</article>
+			</section>
+
+			<section class="grid grid-cols-6 gap-4">
+				<!-- Left Side -->
+				<!-- NOTE: bg-slate-100 -->
+				<div class="space-y-4 col-span-2 p-4" style="background:#f1f5f9;">
+					<LeftSideArticle title="Contact" className="pb-4">
 						<div class="flex flex-col gap-2">
 							{
-								resume.contactInfo?.phone.map((phone) => (
-									<a href={`tel:${phone}`} class="flex items-center gap-4 hover:text-blue-600">
+								resume.contactInfo.phone.map((phone) => (
+									<a
+										target="_blank"
+										href={`tel:${phone}`}
+										class="flex items-center gap-4 hover:text-blue-600"
+									>
 										<i class="fa-solid fa-phone" />
 										<span>{phone}</span>
 									</a>
@@ -168,8 +262,12 @@ const resume: Partial<ResumeJson> = {
 							}
 
 							{
-								resume.contactInfo?.email.map((email) => (
-									<a href={`mailto:${email}`} class="flex items-center gap-4 hover:text-blue-600">
+								resume.contactInfo.email.map((email) => (
+									<a
+										target="_blank"
+										href={`mailto:${email}`}
+										class="flex items-center gap-4 hover:text-blue-600"
+									>
 										<i class="fa-regular fa-envelope" />
 										<span>{email}</span>
 									</a>
@@ -177,8 +275,8 @@ const resume: Partial<ResumeJson> = {
 							}
 
 							{
-								resume.contactInfo?.links.map(({ icon, label, url }) => (
-									<a href={url} class="flex items-center gap-4 hover:text-blue-600">
+								resume.contactInfo.links.map(({ icon, label, url }) => (
+									<a target="_blank" href={url} class="flex items-center gap-4 hover:text-blue-600">
 										{icon ? <i class={icon} /> : <i class="fa-solid fa-link" />}
 										<span>{label}</span>
 									</a>
@@ -187,15 +285,23 @@ const resume: Partial<ResumeJson> = {
 						</div>
 					</LeftSideArticle>
 
-					<LeftSideArticle title="Skills">
+					<LeftSideArticle
+						title="Skills"
+						visible={(resume.skills?.length || 0) > 0}
+						className="pb-4"
+					>
 						<div class="pl-4">
 							<ul class="list-disc">
-								{resume.skills?.jobRelated.map((skill) => <li>{skill}</li>)}
+								{resume.skills?.map((skill) => <li>{skill}</li>)}
 							</ul>
 						</div>
 					</LeftSideArticle>
 
-					<LeftSideArticle title="Educations">
+					<LeftSideArticle
+						title="Educations"
+						visible={(resume.educationHistory?.length || 0) > 0}
+						className="pb-4"
+					>
 						<div class="flex flex-col gap-4">
 							{
 								resume?.educationHistory?.map(
@@ -215,7 +321,11 @@ const resume: Partial<ResumeJson> = {
 						</div>
 					</LeftSideArticle>
 
-					<LeftSideArticle title="Languages">
+					<LeftSideArticle
+						title="Languages"
+						visible={(resume.spokenLanguage?.length || 0) > 0}
+						className="pb-4"
+					>
 						<ul class="flex flex-col gap-4">
 							{
 								resume?.spokenLanguage?.map(({ label, proficiency }) => (
@@ -227,10 +337,50 @@ const resume: Partial<ResumeJson> = {
 							}
 						</ul>
 					</LeftSideArticle>
+
+					<LeftSideArticle
+						title="References"
+						visible={(resume.references?.length || 0) > 0}
+						className="pb-4"
+						hasBorder={false}
+					>
+						{
+							resume.references?.map(({ personName, company, position, email, phone }) => (
+								<article class="p-2 bg-slate-200 space-y-1 mb-2 print:bg-slate-200">
+									<h5 class="text-base">{personName}</h5>
+									<h6 class="text-sm">
+										{position} - {company}
+									</h6>
+									<a
+										target="_blank"
+										href={`mailto:${email}`}
+										class="hover:text-blue-600 flex items-center gap-2"
+									>
+										<span>{email}</span>
+										<i class="fa-regular fa-envelope" />
+									</a>
+									{phone && (
+										<a
+											target="_blank"
+											href={`tel:${phone}`}
+											class="hover:text-blue-600 flex items-center gap-2"
+										>
+											<span>{phone}</span>
+											<i class="fa-solid fa-phone" />
+										</a>
+									)}
+								</article>
+							))
+						}
+					</LeftSideArticle>
 				</div>
 
 				<!-- Right Side -->
-				<div class="col-span-4"></div>
+				<div class="col-span-4">
+					<h4 class="text-lg uppercase my-4">Work Experiences</h4>
+
+					{resume.workExperiences.map((wE) => <WorkExperience workExperience={wE} />)}
+				</div>
 			</section>
 		</main>
 	</body>

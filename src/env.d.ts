@@ -39,14 +39,12 @@ declare global {
 			note?: string
 		}>
 
-		skills: {
-			jobRelated: string[]
-			nonJobRelated: string[]
-		}
+		skills: string[]
 
 		workExperiences: Array<{
 			assignedPosition: string
 			companyName: string
+			companyUrl: string
 			fromDate: string
 			toDate: string
 			descriptions: string[]
