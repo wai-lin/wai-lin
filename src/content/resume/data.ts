@@ -1,7 +1,7 @@
 export const resume: ResumeJson = {
 	avatarUrl: "/profile/transparent-background.png",
 	name: "Wai Lin Aung",
-	positionAppliedFor: "Senior FrontEnd Developer",
+	positionAppliedFor: "Senior Frontend Developer",
 
 	// NOTE: Ideal character count is `650` characters.
 	biography:

@@ -1,6 +1,8 @@
 ---
 import "@fortawesome/fontawesome-free/css/all.min.css"
 
+import Layout from "../components/Layout.astro"
+
 import R01_Header from "../components/Resume/R01_Header.astro"
 import R02_PersonalInformation from "../components/Resume/R02_PersonalInformation.astro"
 import R03_Profile from "../components/Resume/R03_Profile.astro"
@@ -12,20 +14,8 @@ import R08_References from "../components/Resume/R08_References.astro"
 import R09_WorkExperiences from "../components/Resume/R09_WorkExperiences.astro"
 ---
 
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&display=swap"
-		/>
-
-		<title>WaiLinAung - Resume</title>
-
+<Layout title="- Resume">
+	<Fragment slot="head">
 		<script>
 			const printPDFBtn = document.getElementById("print-pdf")
 			printPDFBtn?.addEventListener("click", () => window.print())
@@ -35,11 +25,18 @@ import R09_WorkExperiences from "../components/Resume/R09_WorkExperiences.astro"
 				window.scrollTo({ top: 0, behavior: "smooth" }),
 			)
 		</script>
-	</head>
+	</Fragment>
 
 	<body class="font-body screen:pb-40 relative">
-		<header class="container mx-auto flex items-center justify-between py-8 print:hidden">
-			<h2 class="text-4xl font-semibold">Resume</h2>
+		<header
+			class="container mx-auto flex items-center justify-between py-8 print:hidden px-4 lg:px-0"
+		>
+			<h3 class="text-3xl font-semibold">
+				<a href="/" class="text-blue-700 hover:text-blue-800">
+					<i class="fa-solid fa-arrow-left"></i>
+				</a>
+				<span>Resume</span>
+			</h3>
 
 			<button
 				id="print-pdf"
@@ -90,4 +87,4 @@ import R09_WorkExperiences from "../components/Resume/R09_WorkExperiences.astro"
 			</section>
 		</main>
 	</body>
-</html>
+</Layout>
