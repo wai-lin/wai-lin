@@ -1,0 +1,12 @@
+---
+import { resume } from "../../content/resume/data"
+
+import BaseSubTitle from "./BaseSubTitle.astro"
+import BaseWorkExperience from "./BaseWorkExperience.astro"
+---
+
+<article class="mt-4">
+	<BaseSubTitle class="mb-8">Work Experiences</BaseSubTitle>
+
+	{resume.workExperiences.map((wE) => <BaseWorkExperience workExperience={wE} />)}
+</article>

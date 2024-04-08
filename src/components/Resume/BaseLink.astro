@@ -1,0 +1,19 @@
+---
+interface Props {
+	href: string
+	class?: string
+	targetBlank?: boolean
+	showIcon?: boolean
+}
+const { href, class: className, targetBlank = false, showIcon = false } = Astro.props
+---
+
+<a
+	href={href}
+	target={targetBlank ? "_blank" : ""}
+	class:list={["hover:text-blue-600 group", className]}
+>
+	<slot />
+
+	{showIcon && <i class="fa-solid fa-link opacity-0 group-hover:opacity-50" />}
+</a>

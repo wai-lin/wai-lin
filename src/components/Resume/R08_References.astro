@@ -1,0 +1,41 @@
+---
+import { resume } from "../../content/resume/data"
+
+import BaseArticle from "./BaseArticle.astro"
+---
+
+<BaseArticle
+	title="References"
+	visible={(resume.references?.length || 0) > 0}
+	class="pb-4"
+	hasBorder={false}
+>
+	{
+		resume.references?.map(({ personName, company, position, email, phone }) => (
+			<article class="p-2 bg-slate-200 space-y-1 mb-2 print:bg-slate-200">
+				<h5 class="text-sm">{personName}</h5>
+				<p>
+					{position} - {company}
+				</p>
+				<a
+					target="_blank"
+					href={`mailto:${email}`}
+					class="hover:text-blue-600 flex items-center gap-2"
+				>
+					<span>{email}</span>
+					<i class="fa-regular fa-envelope" />
+				</a>
+				{phone && (
+					<a
+						target="_blank"
+						href={`tel:${phone}`}
+						class="hover:text-blue-600 flex items-center gap-2"
+					>
+						<span>{phone}</span>
+						<i class="fa-solid fa-phone" />
+					</a>
+				)}
+			</article>
+		))
+	}
+</BaseArticle>

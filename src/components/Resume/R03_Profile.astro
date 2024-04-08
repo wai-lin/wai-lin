@@ -1,0 +1,10 @@
+---
+import { resume } from "../../content/resume/data"
+import BaseSubTitle from "./BaseSubTitle.astro"
+---
+
+<article class="col-span-4 border-b border-dashed border-slate-400 py-4">
+	<BaseSubTitle class:list="mb-4">Profile</BaseSubTitle>
+
+	<p class="leading-relaxed">{resume.biography}</p>
+</article>

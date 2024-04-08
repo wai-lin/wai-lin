@@ -1,0 +1,23 @@
+---
+import { resume } from "../../content/resume/data"
+
+import BaseArticle from "./BaseArticle.astro"
+---
+
+<BaseArticle title="Educations" visible={(resume.educationHistory?.length || 0) > 0} class="pb-4">
+	<div class="flex flex-col gap-4">
+		{
+			resume?.educationHistory?.map(({ schoolName, educationTitle, fromYear, toYear }) => (
+				<article>
+					<h6 class="text-base">
+						<span>{schoolName}</span>
+						<small>
+							({fromYear} - {toYear})
+						</small>
+					</h6>
+					<p>{educationTitle}</p>
+				</article>
+			))
+		}
+	</div>
+</BaseArticle>

@@ -1,9 +1,11 @@
+/// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />
 
 export {}
 
 declare global {
 	export interface ResumeJson {
+		avatarUrl: string
 		name: string
 		positionAppliedFor: string
 
