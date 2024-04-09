@@ -4,7 +4,7 @@ export const resume: ResumeJson = {
 	positionAppliedFor: "Frontend Developer",
 
 	// NOTE: Ideal character count is `550` characters.
-	biography: `Hi, I'm a nerdy Frontend Developer who dream to become a Frontend Engineer. I've over 5+ years experience in Software Development.
+	biography: `Hi, I'm a nerdy Frontend Developer who wants to be a Frontend Engineer. I've over 5+ years experience in Software Development.
 I can collaborate with every fields of professions and willing to learn new things. Occasionally listen to Tech Talks as a hobby. I'm currently into the Go Lang and Functional Programming world.`,
 
 	personalInfo: {
@@ -52,6 +52,8 @@ I can collaborate with every fields of professions and willing to learn new thin
 		"Node.JS",
 		"Express.JS",
 		"Nest.JS",
+		"MySQL",
+		"MongoDB",
 		"",
 		"Vite.JS",
 		"PostCSS",
@@ -132,11 +134,11 @@ I can collaborate with every fields of professions and willing to learn new thin
 			toDate: "May 2023",
 			links: ["https://selfservice.kbzbank.com"],
 			descriptions: [
-				"Initiated and lead in migration from JavaScript to Typescript with React.JS for the whole KBZBank Frontend Development Team..",
-				"Developed Self Service Banking Portal in which customers can open new bank accounts via online.",
+				"Initiated and lead in migration from JavaScript to Typescript with React.JS for the whole KBZBank Frontend Development Team.",
+				"Developed Self Service Banking Portal using React.JS in which customers can open new bank accounts via online.",
 				"I have also initiated to standardize the Design System for the company.",
-				"Implemented a Cash Management System which controls all the cash flow of all the KBZBank Branches.",
-				"Also implemented a Survey project which users can answers survey for their satisfaction level for the service they get from the bank and the feedback.",
+				"Implemented a Cash Management System using React.JS , Nest.JS , OracleDB which controls all the cash flow of all the KBZBank Branches.",
+				"Also implemented a Survey project using React.JS which users can answers survey for their satisfaction level for the service they get from the bank and the feedback.",
 			],
 		},
 

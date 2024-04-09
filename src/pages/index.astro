@@ -35,16 +35,14 @@ const links = [
 		>
 			<div class="flex flex-col items-center space-y-2 lg:space-y-4">
 				<div class="inline-block rounded-lg border bg-gray-100 px-3 py-1 text-base">
-					<span>Frontend Developer</span>
+					<span>{resume.positionAppliedFor}</span>
 					{openToWork && <span class="text-blue-700"> | Open to Work</span>}
 				</div>
 				<h1 class="text-4xl font-bold tracking-tighter lg:text-6xl/none">{resume.name}</h1>
 				<p
 					class="max-w-[600px] text-center text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
 				>
-					I build beautiful and performant web experiences.
-					<br />
-					Also create some JS libraries as a hobby.
+					{resume.biography}
 				</p>
 
 				<div class="flex flex-wrap items-center gap-4">
