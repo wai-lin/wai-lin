@@ -4,8 +4,8 @@ export const resume: ResumeJson = {
 	positionAppliedFor: "Senior Frontend Developer",
 
 	// NOTE: Ideal character count is `650` characters.
-	biography:
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis pretium nisl, nec commodo est. Fusce laoreet consequat sapien, eu fermentum ex pulvinar eget. Praesent hendrerit nulla in varius pharetra. Fusce facilisis venenatis lacus in lobortis. Fusce vulputate iaculis mauris. Nunc risus arcu, tempor vel dignissim porta, vulputate id quam. Vestibulum pellentesque augue in lobortis ullamcorper. In eleifend nisl faucibus molestie porttitor.   augue in lobortis ullamcorper. In eleifend nisl faucibus molestie porttitor. Praesent hendrerit nulla in varius pharetra. Fusce facilisis venenatis lacus in lobortis.",
+	biography: `Hi, I'm a nerdy Frontend Developer who dream to become a Frontend Engineer. I've over 5+ years experience in Software Development.
+I can collaborate with every fields of professions and learn new programming languages. Occasionally listen to Tech Talks as a hobby. I'm currently tyring to be in Functional Programming world.`,
 
 	personalInfo: {
 		dateOfBirth: "20, 05, 1998",
@@ -18,6 +18,10 @@ export const resume: ResumeJson = {
 		phone: ["+959252151445"],
 		email: ["wailin.wilbert@gmail.com"],
 		links: [
+			{
+				label: "https://wai-lin.github.io/wai-lin",
+				url: "https://wai-lin.github.io/wai-lin",
+			},
 			{
 				icon: "fa-brands fa-github",
 				label: "github/wai-lin",
@@ -42,7 +46,26 @@ export const resume: ResumeJson = {
 		"Astro.JS",
 		"Next.JS",
 		"Nuxt.JS",
+		"Remix.JS",
+
+		"Node.JS",
+		"Express.JS",
+		"Nest.JS",
+
+		"Vite.JS",
+		"PostCSS",
+
+		"Git",
+		"GitHub",
+		"GitLab",
+		"BitBucket",
+
+		"Neovim",
+		"Go Lang",
+		"Lua",
+
 		"Digital Ocean",
+		"Linode",
 		"AWS Lightsail",
 		"AWS Amplify",
 		"Vercel",
@@ -78,14 +101,6 @@ export const resume: ResumeJson = {
 			position: "CTO",
 			company: "KLink Myanmar",
 			email: "kyawnainghtun93@gmail.com",
-			phone: "+959123456",
-		},
-		{
-			personName: "Kyaw Naing Tun",
-			position: "CTO",
-			company: "KLink Myanmar",
-			email: "kyawnainghtun93@gmail.com",
-			phone: "+959123456",
 		},
 	],
 
@@ -152,5 +167,11 @@ export const resume: ResumeJson = {
 			toDate: "Nov 2016",
 			descriptions: [],
 		},
+	],
+
+	achievements: [
+		"Volunteered at 2018 BarCamp Yangon.",
+		"Volunteered as Tech Organizer at 2019 ITCamp UCSY.",
+		"Mentoring experience for more than 3 batches of Interns at Nexlabs.",
 	],
 }

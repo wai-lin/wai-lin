@@ -5,9 +5,7 @@ import BaseArticle from "./BaseArticle.astro"
 ---
 
 <BaseArticle title="Skills" visible={(resume.skills?.length || 0) > 0} class="pb-4">
-	<div class="pl-4">
-		<ul class="list-disc">
-			{resume.skills?.map((skill) => <li>{skill}</li>)}
-		</ul>
-	</div>
+	<p>
+		{resume.skills.join(" , ")}
+	</p>
 </BaseArticle>

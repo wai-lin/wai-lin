@@ -43,6 +43,14 @@ declare global {
 
 		skills: string[]
 
+		references: Array<{
+			personName: string
+			company: string
+			position: string
+			email: string
+			phone?: string
+		}>
+
 		workExperiences: Array<{
 			assignedPosition: string
 			companyName: string
@@ -52,12 +60,6 @@ declare global {
 			descriptions: string[]
 		}>
 
-		references: Array<{
-			personName: string
-			company: string
-			position: string
-			email: string
-			phone?: string
-		}>
+		achievements: string[]
 	}
 }

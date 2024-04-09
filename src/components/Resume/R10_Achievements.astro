@@ -1,0 +1,16 @@
+---
+import { resume } from "../../content/resume/data"
+
+import BaseArticle from "./BaseArticle.astro"
+---
+
+<BaseArticle
+	visible={resume.achievements.length > 0}
+	title="Achievements"
+	hasBorder={false}
+	class="mt-4"
+>
+	<ul class="list-disc pl-4">
+		{resume.achievements.map((a) => <li>{a}</li>)}
+	</ul>
+</BaseArticle>

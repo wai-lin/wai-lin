@@ -10,8 +10,8 @@ import BaseLink from "./BaseLink.astro"
 		{
 			resume.contactInfo.phone.map((phone) => (
 				<BaseLink targetBlank href={`tel:${phone}`} class="flex items-center gap-4">
-					<i class="fa-solid fa-phone" />
-					<span>{phone}</span>
+					<i class="fa-solid fa-phone size-4 flex-none" />
+					<span class="flex-auto">{phone}</span>
 				</BaseLink>
 			))
 		}
@@ -19,8 +19,8 @@ import BaseLink from "./BaseLink.astro"
 		{
 			resume.contactInfo.email.map((email) => (
 				<BaseLink targetBlank href={`mailto:${email}`} class="flex items-center gap-4">
-					<i class="fa-regular fa-envelope" />
-					<span>{email}</span>
+					<i class="fa-regular fa-envelope size-4 flex-none" />
+					<span class="flex-auto">{email}</span>
 				</BaseLink>
 			))
 		}
@@ -28,11 +28,14 @@ import BaseLink from "./BaseLink.astro"
 		{
 			resume.contactInfo.links.map(({ icon, label, url }) => (
 				<BaseLink targetBlank href={url} class="flex items-center gap-4">
-					{icon ? <i class={icon} /> : <i class="fa-solid fa-link" />}
-					<span>{label}</span>
+					{icon ? (
+						<i class:list={[icon, "flex-none size-4"]} />
+					) : (
+						<i class="fa-solid fa-link flex-none size-4" />
+					)}
+					<span class="flex-auto">{label}</span>
 				</BaseLink>
 			))
 		}
 	</div>
 </BaseArticle>
-
