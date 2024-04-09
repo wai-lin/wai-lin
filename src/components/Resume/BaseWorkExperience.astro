@@ -1,6 +1,8 @@
 ---
 import "../../env.d.ts"
 
+import BaseLink from "./BaseLink.astro"
+
 type WorkExperice = ResumeJson["workExperiences"][number]
 
 interface Props {
@@ -22,7 +24,21 @@ const { workExperience } = Astro.props
 		<span>{workExperience.fromDate} - {workExperience.toDate}</span>
 	</p>
 
-	<ul class="list-disc">
+	<ul class="mt-2 pl-4 list-disc">
 		{workExperience.descriptions.map((d) => <li>{d}</li>)}
 	</ul>
+
+	<p class="mt-2 flex flex-wrap items-center gap-2">
+		{
+			workExperience.links?.map((link) => (
+				<BaseLink
+					href={link}
+					targetBlank
+					class="pr-2 text-blue-600 border-r border-blue-400 hover:underline last-of-type:border-r-0"
+				>
+					{link}
+				</BaseLink>
+			))
+		}
+	</p>
 </article>

@@ -59,6 +59,7 @@ declare global {
 			fromDate: string
 			toDate: string
 			descriptions: string[]
+			links?: string[]
 		}>
 
 		achievements: string[]
