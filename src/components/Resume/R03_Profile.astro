@@ -1,10 +1,9 @@
 ---
 import { resume } from "../../content/resume/data"
-import BaseSubTitle from "./BaseSubTitle.astro"
+
+import BaseArticle from "./BaseArticle.astro"
 ---
 
-<article class="col-span-4 border-b border-dashed border-slate-400 py-4">
-	<BaseSubTitle class:list="mb-4">Profile</BaseSubTitle>
-
-	<p class="leading-relaxed">{resume.biography}</p>
-</article>
+<BaseArticle title="Profile" class="col-span-4 py-4">
+	<p class="leading-loose">{resume.biography}</p>
+</BaseArticle>

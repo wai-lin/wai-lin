@@ -1,17 +1,18 @@
 export const resume: ResumeJson = {
 	avatarUrl: "/wai-lin/profile/transparent-background.png",
 	name: "Wai Lin Aung",
-	positionAppliedFor: "Senior Frontend Developer",
+	positionAppliedFor: "Frontend Developer",
 
-	// NOTE: Ideal character count is `650` characters.
+	// NOTE: Ideal character count is `550` characters.
 	biography: `Hi, I'm a nerdy Frontend Developer who dream to become a Frontend Engineer. I've over 5+ years experience in Software Development.
-I can collaborate with every fields of professions and learn new programming languages. Occasionally listen to Tech Talks as a hobby. I'm currently tyring to be in Functional Programming world.`,
+I can collaborate with every fields of professions and learn new programming languages. Occasionally listen to Tech Talks as a hobby. I'm currently into the Go Lang and Functional Programming world.`,
 
 	personalInfo: {
 		dateOfBirth: "20, 05, 1998",
 		nationality: "Myanmar",
 		religion: "Buddhism",
 		maritalStatus: "single",
+		address: "",
 	},
 
 	contactInfo: {
@@ -24,12 +25,12 @@ I can collaborate with every fields of professions and learn new programming lan
 			},
 			{
 				icon: "fa-brands fa-github",
-				label: "github/wai-lin",
+				label: "https://github.com/wai-lin",
 				url: "https://github.com/wai-lin",
 			},
 			{
 				icon: "fa-brands fa-linkedin",
-				label: "linkedin/wailin-aung",
+				label: "https://www.linkedin.com/in/wailin-aung/",
 				url: "https://www.linkedin.com/in/wailin-aung/",
 			},
 		],
@@ -47,23 +48,25 @@ I can collaborate with every fields of professions and learn new programming lan
 		"Next.JS",
 		"Nuxt.JS",
 		"Remix.JS",
-
+		"",
 		"Node.JS",
 		"Express.JS",
 		"Nest.JS",
-
+		"",
 		"Vite.JS",
 		"PostCSS",
-
+		"",
 		"Git",
 		"GitHub",
 		"GitLab",
 		"BitBucket",
-
+		"Jira",
+		"ClickUp",
+		"",
 		"Neovim",
 		"Go Lang",
 		"Lua",
-
+		"",
 		"Digital Ocean",
 		"Linode",
 		"AWS Lightsail",

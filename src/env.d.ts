@@ -16,6 +16,7 @@ declare global {
 			nationality: string
 			dateOfBirth: string
 			maritalStatus?: "single" | "married" | "divorced" | "common-law" | "separated" | "widowed"
+			address: string
 		}
 
 		contactInfo: {
