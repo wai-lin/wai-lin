@@ -129,7 +129,7 @@ I can collaborate with every fields of professions and willing to learn new thin
 		{
 			companyName: "KBZ Bank",
 			companyUrl: "https://kbzbank.com",
-			assignedPosition: "Senior FrontEnd Enginner",
+			assignedPosition: "FrontEnd Software Enginner",
 			fromDate: "Nov 2021",
 			toDate: "May 2023",
 			links: ["https://selfservice.kbzbank.com"],
