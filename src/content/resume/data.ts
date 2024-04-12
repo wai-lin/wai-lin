@@ -105,7 +105,7 @@ I can collaborate with every fields of professions and willing to learn new thin
 			personName: "Kyaw Naing Tun",
 			position: "CTO",
 			company: "KLink Myanmar",
-			email: "kyawnainghtun93@gmail.com",
+			email: "kyaw@klink.cloud",
 		},
 	],
 
