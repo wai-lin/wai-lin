@@ -36,10 +36,11 @@ declare global {
 
 		educationHistory: Array<{
 			schoolName: string
-			educationTitle: string
-			fromYear: string
-			toYear: string
-			note?: string
+			history: Array<{
+				educationTitle: string
+				fromYear: string
+				toYear: string
+			}>
 		}>
 
 		skills: string[]

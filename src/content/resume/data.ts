@@ -82,10 +82,13 @@ I can collaborate with every fields of professions and willing to learn new thin
 	educationHistory: [
 		{
 			schoolName: "University of Computer Studies, Yangon",
-			educationTitle: "B.C.Sc (Bachelor of Computer Science)",
-			fromYear: "2014",
-			toYear: "2019",
-			note: "",
+			history: [
+				{
+					educationTitle: "B.C.Sc (Bachelor of Computer Science)",
+					fromYear: "2014",
+					toYear: "2019",
+				},
+			],
 		},
 	],
 

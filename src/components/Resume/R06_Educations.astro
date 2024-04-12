@@ -7,15 +7,23 @@ import BaseArticle from "./BaseArticle.astro"
 <BaseArticle title="Educations" visible={(resume.educationHistory?.length || 0) > 0} class="pb-4">
 	<div class="flex flex-col gap-4">
 		{
-			resume?.educationHistory?.map(({ schoolName, educationTitle, fromYear, toYear }) => (
+			resume?.educationHistory?.map(({ schoolName, history }) => (
 				<article>
 					<h6 class="text-base">
 						<span>{schoolName}</span>
-						<small>
-							({fromYear} - {toYear})
-						</small>
 					</h6>
-					<p>{educationTitle}</p>
+					<ul class="list-disc pl-4">
+						{history.map(({ educationTitle, fromYear, toYear }) => (
+							<li>
+								<span>{educationTitle}</span>
+								<small>
+									({fromYear}
+									{toYear.length > 0 ? "-" : ""}
+									{toYear})
+								</small>
+							</li>
+						))}
+					</ul>
 				</article>
 			))
 		}

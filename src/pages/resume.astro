@@ -28,9 +28,9 @@ import R10_Achievements from "../components/Resume/R10_Achievements.astro"
 		</script>
 	</Fragment>
 
-	<body class="font-body screen:pb-40 relative">
+	<body class="relative font-body screen:pb-40">
 		<header
-			class="container mx-auto flex items-center justify-between py-8 print:hidden px-4 lg:px-0"
+			class="container mx-auto flex items-center justify-between px-4 py-8 lg:px-0 print:hidden"
 		>
 			<h3 class="text-3xl font-semibold">
 				<a href="/wai-lin/" class="text-blue-700 hover:text-blue-800">
@@ -41,7 +41,7 @@ import R10_Achievements from "../components/Resume/R10_Achievements.astro"
 
 			<button
 				id="print-pdf"
-				class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
+				class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
 			>
 				<span class="mr-2">Save</span>
 				<i class="fa-solid fa-print"></i>
@@ -59,12 +59,12 @@ import R10_Achievements from "../components/Resume/R10_Achievements.astro"
 		<!-- SECTION: Resume -->
 		<main
 			id="resume-content"
-			class="text-xs screen:mb-20 screen:container screen:mx-auto screen:px-10 screen:py-20 screen:border screen:border-slate-800"
+			class="text-xs screen:container screen:mx-auto screen:mb-20 screen:border screen:border-slate-800 screen:px-10 screen:py-20"
 		>
 			<R01_Header />
 
 			<section class="grid grid-cols-7 gap-4">
-				<div class="pt-4 px-4 bg-slate-100 col-span-3">
+				<div class="col-span-3 bg-slate-100 px-4 pt-4">
 					<R02_PersonalInformation />
 				</div>
 
@@ -73,7 +73,7 @@ import R10_Achievements from "../components/Resume/R10_Achievements.astro"
 
 			<section class="grid grid-cols-7 gap-4">
 				<!-- Left Side -->
-				<aside class="space-y-4 bg-slate-100 col-span-3 p-4">
+				<aside class="col-span-3 space-y-4 bg-slate-100 p-4">
 					<R04_Contact />
 					<R05_Skills />
 					<R06_Education />
