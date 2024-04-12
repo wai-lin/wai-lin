@@ -8,7 +8,7 @@ import BaseArticle from "./BaseArticle.astro"
 	<p
 		set:html={resume.skills.map((skill) => {
 			if (skill === "") return "<br /><br />"
-			return `${skill} , `
+			return `${skill} . `
 		})}
 	/>
 </BaseArticle>
