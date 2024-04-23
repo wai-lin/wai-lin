@@ -12,11 +12,11 @@ I can collaborate with every fields of professions and willing to learn new thin
 		nationality: "Myanmar",
 		religion: "Buddhism",
 		maritalStatus: "single",
-		address: "",
+		address: "Sukhumvit 81, On Nut, Bangkok, Thailand",
 	},
 
 	contactInfo: {
-		phone: ["+959252151445"],
+		phone: ["+66617203991"],
 		email: ["wailin.wilbert@gmail.com"],
 		links: [
 			{
