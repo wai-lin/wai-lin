@@ -4,7 +4,7 @@ export const resume: ResumeJson = {
 	positionAppliedFor: "Frontend Developer",
 
 	// NOTE: Ideal character count is `550` characters.
-	biography: `Hi, I'm a nerdy Frontend Developer who wants to be a Frontend Engineer. I've over 5+ years experience in Software Development.
+	biography: `Hi, I'm a nerdy Frontend Developer. I've over 5+ years experience in Software Development.
 I can collaborate with every fields of professions and willing to learn new things. Occasionally listen to Tech Talks as a hobby. I'm currently into the Go Lang and Functional Programming world.`,
 
 	personalInfo: {
