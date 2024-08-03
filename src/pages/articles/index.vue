@@ -29,6 +29,7 @@ const totalPages = computed(() => Math.ceil(articlesCount / query.limit!));
 		</section>
 
 		<ArticlePagination
+			v-if="articlesCount > 0"
 			:current-page="currentPage"
 			:total-pages="totalPages"
 			class="flex-none"
