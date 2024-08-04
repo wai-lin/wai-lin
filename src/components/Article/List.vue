@@ -18,13 +18,13 @@ function displayDate(d: string) {
 		:key="article._path"
 		:to="article._path"
 		:class="[
-			'block mb-2 w-full flex items-end gap-4',
+			'block mb-2 w-full flex items-end gap-2',
 			'hover:(text-zinc-300)',
 			'visited:(text-zinc-500)',
 		]"
 	>
-		<UiHeading order="6" :title="article.title" />
-		<p class="text-zinc-500 text-sm flex items-center gap-1">
+		<UiHeading order="6" :title="article.title" class="leading-none" />
+		<p class="text-zinc-500 text-sm flex items-center gap-1 leading-none">
 			<span class="i-mynaui-circle-dashed text-current text-xs" />
 			<span class="text-teal-700">{{ displayDate(article.date) }}</span>
 		</p>

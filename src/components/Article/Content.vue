@@ -5,7 +5,18 @@
 </template>
 
 <style>
+code {
+	@apply bg-teal-700! px-1 rounded-sm;
+}
+code::before,
+code::after {
+	@apply content-[unset]!;
+}
+
 pre.shiki {
 	@apply bg-zinc-900;
+}
+pre.shiki code {
+	@apply bg-[unset]!;
 }
 </style>
