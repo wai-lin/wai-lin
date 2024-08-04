@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-	bodyAttrs: { class: "font-body text-slate-400 bg-slate-950" },
+	bodyAttrs: { class: "font-body text-zinc-400 bg-zinc-950" },
 });
 </script>
 

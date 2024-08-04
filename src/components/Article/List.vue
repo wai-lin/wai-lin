@@ -1,31 +1,32 @@
 <script setup lang="ts">
-import type { QueryBuilderParams } from "@nuxt/content";
+import dayjs from "dayjs";
 
-type Props = { query?: QueryBuilderParams };
+type Props = { articles: Article[] };
 const props = defineProps<Props>();
+
+function displayDate(d: string) {
+	return dayjs(d).format("MMM-DD");
+}
 </script>
 
 <template>
-	<ContentList path="/articles" :query="props.query">
-		<template #default="{ list }">
-			<NuxtLink
-				v-for="article in list"
-				:key="article._path"
-				:to="article._path"
-				:class="[
-					'block mb-8 px-8 py-4 w-full',
-					'border-b border-dashed border-slate-600',
-					'hover:(border-teal-500 text-slate-300)',
-					'visited:(bg-teal-600 text-slate-600)',
-				]"
-			>
-				<UiHeading order="4" :title="article.title" />
-				<p class="mt-2 text-slate-500">{{ article.description }}</p>
-			</NuxtLink>
-		</template>
+	<p v-if="props.articles.length <= 0">No articles found.</p>
 
-		<template #not-found>
-			<p>No articles found.</p>
-		</template>
-	</ContentList>
+	<NuxtLink
+		v-else
+		v-for="article in articles"
+		:key="article._path"
+		:to="article._path"
+		:class="[
+			'block mb-2 w-full flex items-end gap-4',
+			'hover:(text-zinc-300)',
+			'visited:(text-zinc-500)',
+		]"
+	>
+		<UiHeading order="6" :title="article.title" />
+		<p class="text-zinc-500 text-sm flex items-center gap-1">
+			<span class="i-mynaui-circle-dashed text-current text-xs" />
+			<span class="text-teal-700">{{ displayDate(article.date) }}</span>
+		</p>
+	</NuxtLink>
 </template>

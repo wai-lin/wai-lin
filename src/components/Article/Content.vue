@@ -1,11 +1,11 @@
 <template>
-	<article class="w-full prose prose-white text-slate-400">
+	<article class="w-full max-w-[unset] prose prose-white text-zinc-400">
 		<ContentDoc />
 	</article>
 </template>
 
 <style>
 pre.shiki {
-	@apply bg-slate-900;
+	@apply bg-zinc-900;
 }
 </style>

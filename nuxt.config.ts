@@ -29,6 +29,6 @@ export default defineNuxtConfig({
 		transformers: [transformerVariantGroup(), transformerDirectives()],
 	},
 	content: {
-		highlight: { theme: "github-dark-default" },
+		highlight: { theme: "vitesse-dark" },
 	},
 });

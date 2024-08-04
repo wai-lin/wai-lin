@@ -14,12 +14,12 @@ const props = withDefaults(defineProps<Props>(), {
 	<button
 		:type="props.type"
 		:class="[
-			'py-2.5 px-5 font-medium bg-slate-900 text-slate-400',
-			'rounded-lg border border-slate-400 ',
+			'py-2.5 px-5 font-medium bg-zinc-900 text-zinc-400',
+			'rounded-lg border border-zinc-400 ',
 			'flex gap-2 items-center justify-center',
-			'hover:(bg-slate-950)',
-			'focus:(outline-none z-10 ring-4 ring-slate-800)',
-			'disabled:(text-slate-700 border-slate-700 pointer-events-none)',
+			'hover:(bg-zinc-950)',
+			'focus:(outline-none z-10 ring-4 ring-zinc-800)',
+			'disabled:(text-zinc-700 bg-zinc-950 border-zinc-700 pointer-events-none)',
 		]"
 	>
 		<slot>

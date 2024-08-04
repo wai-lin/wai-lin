@@ -31,7 +31,7 @@ const nextLink = computed(() => {
 				icon-left="i-mynaui-arrow-left"
 				label="Previous"
 				:disabled="isFirstPage"
-				class="size-full hover:(border-teal-700 text-teal-600) active:(border-teal-600 text-teal-500 ring-teal-950)"
+				class="text-lg size-full hover:(border-teal-700 text-teal-600) active:(border-teal-600 text-teal-500 ring-teal-950)"
 			/>
 		</NuxtLink>
 
@@ -45,7 +45,7 @@ const nextLink = computed(() => {
 				icon-right="i-mynaui-arrow-right"
 				label="Next"
 				:disabled="props.currentPage === props.totalPages"
-				class="size-full hover:(border-teal-700 text-teal-600) active:(border-teal-600 text-teal-500 ring-teal-950)"
+				class="text-lg size-full hover:(border-teal-700 text-teal-600) active:(border-teal-600 text-teal-500 ring-teal-950)"
 			/>
 		</NuxtLink>
 	</div>
