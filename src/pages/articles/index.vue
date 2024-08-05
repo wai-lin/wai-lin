@@ -4,7 +4,9 @@ import dayjs from "dayjs";
 const { data: articles } = await useAsyncData(
 	"articles",
 	function () {
-		return queryContent<Article>("articles").find();
+		return queryContent<Article>("articles")
+			.where({ is_published: true })
+			.find();
 	},
 	{
 		transform(articles) {
@@ -23,20 +25,28 @@ const yearGroups = computed(() => {
 	return group;
 });
 const sortedYears = computed(() => {
-	return Object.keys(yearGroups.value).sort((a, b) => Number(b) - Number(a));
+	const keys = Object.keys(yearGroups.value);
+	if (keys.length <= 0) return [];
+	return keys.sort((a, b) => Number(b) - Number(a));
 });
+
+function getArticles(year: string) {
+	return yearGroups.value[year] || [];
+}
 </script>
 
 <template>
 	<UiHeading order="2" title="Articles" class="mb-10" />
 
 	<section>
+		<p v-if="sortedYears.length <= 0">No articles.</p>
 		<article
+			v-else
 			v-for="year in sortedYears"
 			class="mb-8 pb-8 border-b border-dashed border-zinc-600 last-of-type:(border-none)"
 		>
 			<UiHeading order="4" :title="String(year)" class="mb-4" />
-			<ArticleList :articles="yearGroups[year]" />
+			<ArticleList :articles="getArticles(year)" />
 		</article>
 	</section>
 </template>

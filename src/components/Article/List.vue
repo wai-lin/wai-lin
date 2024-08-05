@@ -10,23 +10,22 @@ function displayDate(d: string) {
 </script>
 
 <template>
-	<p v-if="props.articles.length <= 0">No articles found.</p>
-
 	<NuxtLink
-		v-else
 		v-for="article in articles"
 		:key="article._path"
 		:to="article._path"
 		:class="[
-			'block mb-2 w-full flex items-end gap-2',
-			'hover:(text-zinc-300)',
+			'block w-full flex items-end gap-2 mb-4 last-of-type:mb-0',
+			'hover:(text-zinc-400)',
 			'visited:(text-zinc-500)',
 		]"
 	>
 		<UiHeading order="6" :title="article.title" class="leading-none" />
 		<p class="text-zinc-500 text-sm flex items-center gap-1 leading-none">
 			<span class="i-mynaui-circle-dashed text-current text-xs" />
-			<span class="text-teal-700">{{ displayDate(article.date) }}</span>
+			<span class="text-teal-700 dark:(text-teal-500)">{{
+				displayDate(article.date)
+			}}</span>
 		</p>
 	</NuxtLink>
 </template>

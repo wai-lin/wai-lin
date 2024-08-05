@@ -12,11 +12,14 @@ export default defineNuxtConfig({
 	compatibilityDate: "2024-04-03",
 	devtools: { enabled: true },
 	srcDir: "src/",
-	modules: ["@nuxt/content", "@unocss/nuxt"],
+	modules: ["@nuxt/content", "@unocss/nuxt", "@nuxtjs/color-mode"],
 	css: ["@unocss/reset/tailwind.css"],
+	content: {
+		highlight: { theme: "vitesse-dark" },
+	},
 	unocss: {
 		presets: [
-			presetUno({ dark: "class" }),
+			presetUno({ dark: "class", content: ["src/**/*"] }),
 			presetIcons({ scale: 1 }),
 			presetTypography(),
 			presetWebFonts({
@@ -28,7 +31,5 @@ export default defineNuxtConfig({
 		],
 		transformers: [transformerVariantGroup(), transformerDirectives()],
 	},
-	content: {
-		highlight: { theme: "vitesse-dark" },
-	},
+	colorMode: { classSuffix: "" },
 });

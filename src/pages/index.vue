@@ -1,3 +1,3 @@
 <template>
-	<UiHeading title="Hello" />
+	<Content />
 </template>
