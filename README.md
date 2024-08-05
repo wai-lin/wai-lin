@@ -1,75 +1,10 @@
-# Nuxt 3 Minimal Starter
+# Hey 👋
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+I'm Wai Lin Aung, a web developer and a tote-bag fanatic.
+Currently, I'm trying to snuggle into GoLang and FP zone.
+I do WebUIs, JS libraries, etc... I use both vscode and vim btw 😉.
 
-## Setup
+Aside from coding, I enjoy cooking, badminton and table tennis.
 
-Make sure to install the dependencies:
+I do: `Vue.JS`, `React.JS`, `JavaScript`, `TypeScript`, `CSS`, `HTML`
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
