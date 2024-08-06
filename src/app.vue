@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const bodyClass = [
-	"font-body text-zinc-600 bg-zinc-100",
+	"font-body text-[15px] text-zinc-600 bg-zinc-100",
 	"dark:(bg-zinc-950 text-zinc-300)",
 	"selection:(bg-teal-300 text-teal-950)",
 ].join(" ");
