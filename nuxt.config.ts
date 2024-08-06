@@ -10,6 +10,7 @@ import {
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: "2024-04-03",
+	nitro: { prerender: { autoSubfolderIndex: false } },
 	devtools: { enabled: true },
 	srcDir: "src/",
 	modules: ["@nuxt/content", "@unocss/nuxt", "@nuxtjs/color-mode"],
@@ -24,8 +25,8 @@ export default defineNuxtConfig({
 			presetTypography(),
 			presetWebFonts({
 				fonts: {
-					body: ["IBM Plex Serif", "Noto Serif Myanmar"],
-					mono: ["IBM Plex Mono", "Noto Serif Myanmar"],
+					body: ["IBM Plex Serif", "Noto Sans Myanmar"],
+					mono: ["IBM Plex Mono", "Noto Sans Myanmar"],
 				},
 			}),
 		],

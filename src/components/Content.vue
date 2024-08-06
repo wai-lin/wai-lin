@@ -1,6 +1,6 @@
 <template>
 	<article
-		class="w-full max-w-[unset] prose prose-zinc text-zinc-800 dark:(prose-white text-zinc-300)"
+		class="w-full max-w-[unset] prose prose- prose-zinc text-zinc-800 dark:(prose-white text-zinc-300)"
 	>
 		<ContentDoc>
 			<template #empty>
@@ -14,6 +14,10 @@
 </template>
 
 <style>
+.prose h1 {
+	@apply mb-10;
+}
+
 .prose code {
 	@apply bg-teal-700! text-zinc-200! px-1 rounded-sm;
 }
