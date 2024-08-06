@@ -7,8 +7,7 @@
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare",
-		"cloudflare": "nuxi build --preset=cloudflare_pages"
+		"postinstall": "nuxt prepare"
 	},
 	"dependencies": {
 		"@nuxt/content": "^2.13.2",
