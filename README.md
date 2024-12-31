@@ -1,10 +1,9 @@
 # Hey 👋
 
-I'm Wai Lin Aung, a web developer and a tote-bag fanatic.
-Currently, I'm trying to snuggle into GoLang and FP zone.
-I do WebUIs, JS libraries, etc... I use both vscode and vim btw 😉.
+I'm Wai Lin Aung (you can call me `Aung`), a web developer and a tote-bag fanatic.
+I do WebUIs, JS libraries, etc... I use both vscode and neovim btw 😉.
 
-Aside from coding, I enjoy cooking, badminton and table tennis.
+Aside from coding, I enjoy cooking and badminton.
 
 I do: `Vue.JS`, `React.JS`, `JavaScript`, `TypeScript`, `CSS`, `HTML`
 
