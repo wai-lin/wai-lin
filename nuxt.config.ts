@@ -9,6 +9,11 @@ export default defineNuxtConfig({
 	vite: {
 		plugins: [tailwindcss()]
 	},
+	routeRules: {
+		"/stats.js": {
+			proxy: "https://cloud.umami.is/script.js"
+		}
+	},
 	app: {
 		head: {
 			title: 'Wai Lin Aung - Full Stack Developer',
