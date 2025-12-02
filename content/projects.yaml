@@ -2,7 +2,7 @@ projects:
   - id: 1
     title: "KLink Myanmar Dashboard"
     description: "Lead the development of a comprehensive dashboard system. Implemented LinkusSDK for Yeastar phone integration enabling phone calls within the React.JS dashboard. Standardized the tech stack with React.js, TypeScript, TailwindCSS, and AWS Amplify."
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80"
+    image: "/projects/klink.svg"
     tags:
       - React.js
       - TypeScript
@@ -17,7 +17,7 @@ projects:
   - id: 2
     title: "KBZ Self Service Banking Portal"
     description: "Developed a comprehensive Self Service Banking Portal allowing customers to open new bank accounts online. Led the migration from JavaScript to TypeScript for the entire frontend team. Implemented with React.js and modern tooling."
-    image: "https://images.unsplash.com/photo-1601597111822-f2e2e4537dba?w=500&q=80"
+    image: "/projects/kbz-selfservice.png"
     tags:
       - React.js
       - TypeScript
@@ -30,7 +30,7 @@ projects:
   - id: 3
     title: "KBZ Cash Management System"
     description: "Implemented a comprehensive Cash Management System that controls all cash flow across KBZ Bank branches. Built with React.js frontend and OracleDB for robust data management."
-    image: "https://images.unsplash.com/photo-1554224311-beee415c15c9?w=500&q=80"
+    image: "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     tags:
       - React.js
       - OracleDB
@@ -40,7 +40,7 @@ projects:
   - id: 4
     title: "Mingalar Cinema KBZ Pay Mini App"
     description: "Developed a movie booking and ticketing mini app within KBZ Pay application. Users can choose movies, cinemas, select seats, and purchase tickets directly within the KBZ Pay ecosystem."
-    image: "https://images.unsplash.com/photo-1489599849228-ed2dc6a6c885?w=500&q=80"
+    image: "https://cdn.prod.website-files.com/5feae390ff62e77285621dc5/61d0228fab815def6227f0ea_Movies.png"
     tags:
       - Nuxt.js
       - Vue.js
@@ -65,7 +65,7 @@ projects:
   - id: 6
     title: "Pun Hlaing Hospital Video Consultation"
     description: "Implemented a video call web application enabling patients to consult with doctors remotely. Doctors can provide medical notes and digital prescriptions through the platform."
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80"
+    image: "https://cdn.prod.website-files.com/5feae390ff62e77285621dc5/5ffc511e7c9c156bedb1f0c8_Pun%20Hlaing.png"
     tags:
       - React.js
       - WebRTC
@@ -75,7 +75,7 @@ projects:
   - id: 7
     title: "U=U Campaign Platform"
     description: "Built a web platform for Myanmar's Minister of Health Organization to promote HIV awareness. HIV positive individuals can share stories and connect with others through the platform."
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80"
+    image: "https://cdn.prod.website-files.com/5feae390ff62e77285621dc5/5feb6a2b7b9f086bd894a2d6_sdfsdfsd.jpg"
     tags:
       - Vue.js
       - Firebase
