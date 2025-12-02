@@ -1,6 +1,13 @@
 projects:
-  - id: 1
-    title: "KLink"
+  - title: "Student Booking System"
+    description: "Maintained an existing student booking system for the Ministry of Higher Education, Science, Research and Innovation Thailand."
+    image: "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    tags:
+      - React.js
+      - Next.js
+      - ShadcnUI
+
+  - title: "KLink"
     description: "Lead the development of a comprehensive dashboard system. Implemented LinkusSDK for Yeastar phone integration enabling phone calls within the React.JS dashboard. Standardized the tech stack with React.js, TypeScript, TailwindCSS, and AWS Amplify."
     image: "/projects/klink.svg"
     tags:
@@ -14,8 +21,7 @@ projects:
         url: "https://www.klink.cloud"
     featured: true
   
-  - id: 2
-    title: "KBZ Self Service Banking Portal"
+  - title: "KBZ Self Service Banking Portal"
     description: "Developed a comprehensive Self Service Banking Portal allowing customers to open new bank accounts online. Led the migration from JavaScript to TypeScript for the entire frontend team. Implemented with React.js and modern tooling."
     image: "/projects/kbz-selfservice.png"
     tags:
@@ -27,8 +33,7 @@ projects:
         url: "https://selfservice.kbzbank.com"
     featured: true
   
-  - id: 3
-    title: "KBZ Cash Management System"
+  - title: "KBZ Cash Management System"
     description: "Implemented a comprehensive Cash Management System that controls all cash flow across KBZ Bank branches. Built with React.js frontend and OracleDB for robust data management."
     image: "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     tags:
@@ -37,8 +42,7 @@ projects:
       - TypeScript
     links: []
   
-  - id: 4
-    title: "Mingalar Cinema KBZ Pay Mini App"
+  - title: "Mingalar Cinema KBZ Pay Mini App"
     description: "Developed a movie booking and ticketing mini app within KBZ Pay application. Users can choose movies, cinemas, select seats, and purchase tickets directly within the KBZ Pay ecosystem."
     image: "https://cdn.prod.website-files.com/5feae390ff62e77285621dc5/61d0228fab815def6227f0ea_Movies.png"
     tags:
@@ -51,8 +55,7 @@ projects:
         url: "https://www.nexlabs.co/case-studies/mingalar-cinema"
     featured: true
 
-  - id: 5
-    title: "Unique Unicorns"
+  - title: "Unique Unicorns"
     description: "Designed a comprehensive digital experience for an owner-operated childcare centre in Townsville. Created a warm, welcoming platform that showcases their Reggio Emilia teaching philosophy, extended care hours (6am-6pm), qualified staff, and specialized facilities. The platform highlights their unique educational programs, centre pets, and communicates their commitment to providing quality care and learning experiences for children."
     image: "https://framerusercontent.com/images/XNfrtjFIPYszrWTz0TPCR4Qj3Y.png?width=1117&height=850"
     tags:
@@ -64,8 +67,7 @@ projects:
       - label: "Product"
         url: "https://www.uniqueunicorns.com.au/"
 
-  - id: 6
-    title: "We Ticket - Event Ticketing Platform"
+  - title: "We Ticket - Event Ticketing Platform"
     description: "Built a comprehensive ticketing platform where users can browse, book, and purchase tickets for events and shows. Implemented seating planner, payment integration, and ticket management system."
     image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&q=80"
     tags:
@@ -75,8 +77,7 @@ projects:
       - Real-time Updates
     links: []
   
-  - id: 7
-    title: "Pun Hlaing Hospital Video Consultation"
+  - title: "Pun Hlaing Hospital Video Consultation"
     description: "Implemented a video call web application enabling patients to consult with doctors remotely. Doctors can provide medical notes and digital prescriptions through the platform."
     image: "https://cdn.prod.website-files.com/5feae390ff62e77285621dc5/5ffc511e7c9c156bedb1f0c8_Pun%20Hlaing.png"
     tags:
@@ -87,8 +88,7 @@ projects:
       - label: "Case Study"
         url: "https://www.nexlabs.co/case-studies/pun-hlaing-telemedicine-app-ongoing"
   
-  - id: 8
-    title: "U=U Campaign Platform"
+  - title: "U=U Campaign Platform"
     description: "Built a web platform for Myanmar's Minister of Health Organization to promote HIV awareness. HIV positive individuals can share stories and connect with others through the platform."
     image: "https://cdn.prod.website-files.com/5feae390ff62e77285621dc5/5feb6a2b7b9f086bd894a2d6_sdfsdfsd.jpg"
     tags:
@@ -96,12 +96,12 @@ projects:
       - Firebase
       - Real-time Database
       - Social Features
+    featured: true
     links:
       - label: "Case Study"
         url: "https://www.nexlabs.co/case-studies/u-u"
   
-  - id: 9
-    title: "KBZ Bank Survey Platform"
+  - title: "KBZ Bank Survey Platform"
     description: "Developed a survey system for KBZ Bank customers to provide feedback on their banking experience. Integrated with backend to collect and analyze customer satisfaction metrics."
     image: "https://images.unsplash.com/photo-1589187775328-882e91b3db4f?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     tags:
@@ -110,12 +110,12 @@ projects:
       - Forms
     links: []
   
-  - id: 10
-    title: "Design System with ShadcnUI"
-    description: "Implemented a comprehensive Design System for KLink Myanmar using ShadcnUI components and TailwindCSS. Standardized UI components across all applications for consistency and maintainability."
+  - title: "Design System with ShadcnUI"
+    description: "Implemented a comprehensive Design System for KLink using ShadcnUI components and TailwindCSS. Standardized UI components across all applications for consistency and maintainability."
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&q=80"
     tags:
       - React.js
       - ShadcnUI
       - TailwindCSS
       - Design System
+
