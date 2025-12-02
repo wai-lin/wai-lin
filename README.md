@@ -16,6 +16,7 @@ Currently freelancing while pursuing my Master's degree at Harbour.Space. When I
 
 ## Connect
 
+- **Website**: [wailinaung.com](https://wailinaung.com)
 - **GitHub**: [wai-lin](https://github.com/wai-lin)
 - **LinkedIn**: [wailin-aung](https://www.linkedin.com/in/wailin-aung/)
 - **Email**: dev.wailin@gmail.com
