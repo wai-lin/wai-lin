@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --color-dark: #0f172a;
+  --color-light: #ffffff;
+
+  /* Custom animation durations */
+  --duration-fade: 600ms;
+}
+
+@utility scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+@utility fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@utility fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@utility slide-in-left {
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@utility blob {
+  animation: blob 7s infinite;
+}
+
+@utility blob-delay-2 {
+  animation-delay: 2s;
+}
+
+@utility blob-delay-4 {
+  animation-delay: 4s;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-blue-500);
+  color: white;
+}
+
+/* Smooth base transitions */
+@layer base {
+  body {
+    @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  button {
+    @apply transition-all duration-200;
+  }
+}
+

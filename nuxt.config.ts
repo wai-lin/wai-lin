@@ -1,36 +1,27 @@
-import {
-	presetUno,
-	presetIcons,
-	presetTypography,
-	presetWebFonts,
-	transformerVariantGroup,
-	transformerDirectives,
-} from "unocss";
+import tailwindcss from "@tailwindcss/vite"
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	compatibilityDate: "2024-04-03",
-	nitro: { prerender: { autoSubfolderIndex: false } },
+	compatibilityDate: '2025-07-15',
 	devtools: { enabled: true },
-	srcDir: "src/",
-	modules: ["@nuxt/content", "@unocss/nuxt", "@nuxtjs/color-mode"],
-	css: ["@unocss/reset/tailwind.css"],
-	content: {
-		highlight: { theme: "vitesse-dark" },
+	css: ['~/assets/css/main.css'],
+	vite: {
+		plugins: [tailwindcss()]
 	},
-	unocss: {
-		presets: [
-			presetUno({ dark: "class", content: ["src/**/*"] }),
-			presetIcons({ scale: 1 }),
-			presetTypography(),
-			presetWebFonts({
-				fonts: {
-					body: ["IBM Plex Serif", "Noto Sans Myanmar"],
-					mono: ["IBM Plex Mono", "Noto Sans Myanmar"],
-				},
-			}),
-		],
-		transformers: [transformerVariantGroup(), transformerDirectives()],
+	app: {
+		head: {
+			title: 'Wai Lin Aung - Full Stack Developer',
+			meta: [
+				{ charset: 'utf-8' },
+				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+				{ name: 'description', content: 'Full stack developer portfolio - Vue.js, Nuxt.js, Node.js' },
+			],
+			link: [
+				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+				{ rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+				{ rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap' },
+			],
+		},
 	},
-	colorMode: { classSuffix: "" },
-});
+})
