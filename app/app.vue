@@ -17,13 +17,11 @@ useHead({
   },
 })
 
+// Initialize theme on app mount
+const { initTheme } = useTheme()
+
 onMounted(() => {
-  const theme = localStorage.getItem('theme')
-  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
+  initTheme()
 })
 </script>
 

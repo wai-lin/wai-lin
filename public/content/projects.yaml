@@ -1,6 +1,6 @@
 projects:
   - id: 1
-    title: "KLink Myanmar Dashboard"
+    title: "KLink"
     description: "Lead the development of a comprehensive dashboard system. Implemented LinkusSDK for Yeastar phone integration enabling phone calls within the React.JS dashboard. Standardized the tech stack with React.js, TypeScript, TailwindCSS, and AWS Amplify."
     image: "/projects/klink.svg"
     tags:
@@ -83,7 +83,9 @@ projects:
       - React.js
       - WebRTC
       - Node.js
-    links: []
+    links:
+      - label: "Case Study"
+        url: "https://www.nexlabs.co/case-studies/pun-hlaing-telemedicine-app-ongoing"
   
   - id: 8
     title: "U=U Campaign Platform"
@@ -94,7 +96,9 @@ projects:
       - Firebase
       - Real-time Database
       - Social Features
-    links: []
+    links:
+      - label: "Case Study"
+        url: "https://www.nexlabs.co/case-studies/u-u"
   
   - id: 9
     title: "KBZ Bank Survey Platform"
