@@ -44,21 +44,21 @@
           </ul>
         </div>
 
-         <!-- Social Links -->
-         <div>
-           <h4 class="font-semibold mb-4">Connect</h4>
-           <div class="flex gap-4">
-             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors text-xl">
-               🐙
-             </a>
-             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors text-xl">
-               💼
-             </a>
-             <a href="mailto:dev.wailin@gmail.com" class="text-slate-400 hover:text-white transition-colors text-xl">
-               ✉️
-             </a>
-           </div>
-         </div>
+          <!-- Social Links -->
+          <div>
+            <h4 class="font-semibold mb-4">Connect</h4>
+            <div class="flex gap-4">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition-all duration-300">
+                <Icon name="tabler:brand-github" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition-all duration-300">
+                <Icon name="tabler:brand-linkedin" />
+              </a>
+              <a href="mailto:dev.wailin@gmail.com" class="w-10 h-10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition-all duration-300">
+                <Icon name="tabler:mail" />
+              </a>
+            </div>
+          </div>
       </div>
 
       <!-- Bottom Bar -->

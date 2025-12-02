@@ -50,8 +50,21 @@ projects:
       - label: "Case Study"
         url: "https://www.nexlabs.co/case-studies/mingalar-cinema"
     featured: true
-  
+
   - id: 5
+    title: "Unique Unicorns"
+    description: "Designed a comprehensive digital experience for an owner-operated childcare centre in Townsville. Created a warm, welcoming platform that showcases their Reggio Emilia teaching philosophy, extended care hours (6am-6pm), qualified staff, and specialized facilities. The platform highlights their unique educational programs, centre pets, and communicates their commitment to providing quality care and learning experiences for children."
+    image: "https://framerusercontent.com/images/XNfrtjFIPYszrWTz0TPCR4Qj3Y.png?width=1117&height=850"
+    tags:
+      - Nuxt.JS
+      - Vue.JS
+      - Firebase
+      - Netlify
+    links:
+      - label: "Product"
+        url: "https://www.uniqueunicorns.com.au/"
+
+  - id: 6
     title: "We Ticket - Event Ticketing Platform"
     description: "Built a comprehensive ticketing platform where users can browse, book, and purchase tickets for events and shows. Implemented seating planner, payment integration, and ticket management system."
     image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&q=80"
@@ -62,7 +75,7 @@ projects:
       - Real-time Updates
     links: []
   
-  - id: 6
+  - id: 7
     title: "Pun Hlaing Hospital Video Consultation"
     description: "Implemented a video call web application enabling patients to consult with doctors remotely. Doctors can provide medical notes and digital prescriptions through the platform."
     image: "https://cdn.prod.website-files.com/5feae390ff62e77285621dc5/5ffc511e7c9c156bedb1f0c8_Pun%20Hlaing.png"
@@ -72,7 +85,7 @@ projects:
       - Node.js
     links: []
   
-  - id: 7
+  - id: 8
     title: "U=U Campaign Platform"
     description: "Built a web platform for Myanmar's Minister of Health Organization to promote HIV awareness. HIV positive individuals can share stories and connect with others through the platform."
     image: "https://cdn.prod.website-files.com/5feae390ff62e77285621dc5/5feb6a2b7b9f086bd894a2d6_sdfsdfsd.jpg"
@@ -83,17 +96,17 @@ projects:
       - Social Features
     links: []
   
-  - id: 8
+  - id: 9
     title: "KBZ Bank Survey Platform"
     description: "Developed a survey system for KBZ Bank customers to provide feedback on their banking experience. Integrated with backend to collect and analyze customer satisfaction metrics."
-    image: "https://images.unsplash.com/photo-1516321318423-f06f70d504c0?w=500&q=80"
+    image: "https://images.unsplash.com/photo-1589187775328-882e91b3db4f?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     tags:
       - React.js
       - Analytics
       - Forms
     links: []
   
-  - id: 9
+  - id: 10
     title: "Design System with ShadcnUI"
     description: "Implemented a comprehensive Design System for KLink Myanmar using ShadcnUI components and TailwindCSS. Standardized UI components across all applications for consistency and maintainability."
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&q=80"

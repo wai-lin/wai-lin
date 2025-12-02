@@ -28,12 +28,12 @@
 								:href="social.url" :title="social.name" target="_blank"
 								rel="noopener noreferrer"
 								class="w-12 h-12 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300 hover:scale-110 hover:shadow-lg">
-								<span v-if="social.icon === 'github'"
-									class="text-lg">🐙</span>
-								<span v-else-if="social.icon === 'linkedin'"
-									class="text-lg">💼</span>
-								<span v-else-if="social.icon === 'email'"
-									class="text-lg">✉️</span>
+								<Icon v-if="social.icon === 'github'"
+									name="tabler:brand-github" />
+								<Icon v-else-if="social.icon === 'linkedin'"
+									name="tabler:brand-linkedin" />
+								<Icon v-else-if="social.icon === 'email'"
+									name="tabler:mail" />
 							</a>
 						</div>
 					</div>
