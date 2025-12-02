@@ -1,0 +1,104 @@
+projects:
+  - id: 1
+    title: "KLink Myanmar Dashboard"
+    description: "Lead the development of a comprehensive dashboard system. Implemented LinkusSDK for Yeastar phone integration enabling phone calls within the React.JS dashboard. Standardized the tech stack with React.js, TypeScript, TailwindCSS, and AWS Amplify."
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80"
+    tags:
+      - React.js
+      - TypeScript
+      - TailwindCSS
+      - AWS Amplify
+      - LinkusSDK
+    links:
+      - label: "Company"
+        url: "https://www.klink.cloud"
+    featured: true
+  
+  - id: 2
+    title: "KBZ Self Service Banking Portal"
+    description: "Developed a comprehensive Self Service Banking Portal allowing customers to open new bank accounts online. Led the migration from JavaScript to TypeScript for the entire frontend team. Implemented with React.js and modern tooling."
+    image: "https://images.unsplash.com/photo-1601597111822-f2e2e4537dba?w=500&q=80"
+    tags:
+      - React.js
+      - TypeScript
+      - REST APIs
+    links:
+      - label: "Product"
+        url: "https://selfservice.kbzbank.com"
+    featured: true
+  
+  - id: 3
+    title: "KBZ Cash Management System"
+    description: "Implemented a comprehensive Cash Management System that controls all cash flow across KBZ Bank branches. Built with React.js frontend and OracleDB for robust data management."
+    image: "https://images.unsplash.com/photo-1554224311-beee415c15c9?w=500&q=80"
+    tags:
+      - React.js
+      - OracleDB
+      - TypeScript
+    links: []
+  
+  - id: 4
+    title: "Mingalar Cinema KBZ Pay Mini App"
+    description: "Developed a movie booking and ticketing mini app within KBZ Pay application. Users can choose movies, cinemas, select seats, and purchase tickets directly within the KBZ Pay ecosystem."
+    image: "https://images.unsplash.com/photo-1489599849228-ed2dc6a6c885?w=500&q=80"
+    tags:
+      - Nuxt.js
+      - Vue.js
+      - Firebase
+      - Payment Integration
+    links:
+      - label: "Case Study"
+        url: "https://www.nexlabs.co/case-studies/mingalar-cinema"
+    featured: true
+  
+  - id: 5
+    title: "We Ticket - Event Ticketing Platform"
+    description: "Built a comprehensive ticketing platform where users can browse, book, and purchase tickets for events and shows. Implemented seating planner, payment integration, and ticket management system."
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&q=80"
+    tags:
+      - Nuxt.js
+      - Vue.js
+      - TypeScript
+      - Real-time Updates
+    links: []
+  
+  - id: 6
+    title: "Pun Hlaing Hospital Video Consultation"
+    description: "Implemented a video call web application enabling patients to consult with doctors remotely. Doctors can provide medical notes and digital prescriptions through the platform."
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80"
+    tags:
+      - React.js
+      - WebRTC
+      - Node.js
+    links: []
+  
+  - id: 7
+    title: "U=U Campaign Platform"
+    description: "Built a web platform for Myanmar's Minister of Health Organization to promote HIV awareness. HIV positive individuals can share stories and connect with others through the platform."
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80"
+    tags:
+      - Vue.js
+      - Firebase
+      - Real-time Database
+      - Social Features
+    links: []
+  
+  - id: 8
+    title: "KBZ Bank Survey Platform"
+    description: "Developed a survey system for KBZ Bank customers to provide feedback on their banking experience. Integrated with backend to collect and analyze customer satisfaction metrics."
+    image: "https://images.unsplash.com/photo-1516321318423-f06f70d504c0?w=500&q=80"
+    tags:
+      - React.js
+      - Analytics
+      - Forms
+    links: []
+  
+  - id: 9
+    title: "Design System with ShadcnUI"
+    description: "Implemented a comprehensive Design System for KLink Myanmar using ShadcnUI components and TailwindCSS. Standardized UI components across all applications for consistency and maintainability."
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&q=80"
+    tags:
+      - React.js
+      - ShadcnUI
+      - TailwindCSS
+      - Design System

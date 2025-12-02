@@ -1,0 +1,130 @@
+name: "Wai Lin Aung"
+title: "Fullstack Web Developer"
+bio: "I'm Wai Lin Aung (call me Aung) from Myanmar – a web developer and tote-bag enthusiast with 5+ years crafting WebUIs and JS libraries. I code in both VSCode and Neovim, and when I'm not building things, you'll find me cooking 🧑‍🍳 or playing badminton 🏸. Passionate about Vue.js, React.js, TypeScript, and modern web development. Currently freelancing while pursuing a Master's degree, I build scalable applications with Node.js and cloud platforms. Expert in creating design systems, leading development teams, and mentoring engineers to excellence."
+
+skills:
+  - category: "Frontend"
+    items:
+      - Vue.js
+      - Nuxt.js
+      - React.js
+      - Next.js
+      - Astro.js
+      - Remix.js
+      - TypeScript
+      - JavaScript
+      - TailwindCSS
+      - ShadcnUI
+      - PostCSS
+      - Vite.js
+      - HTML
+      - CSS
+  
+  - category: "Backend"
+    items:
+      - Node.js
+      - Express.js
+      - MySQL
+      - MongoDB
+      - OracleDB
+      - REST APIs
+  
+  - category: "Tools & DevOps"
+    items:
+      - Git
+      - GitHub
+      - GitLab
+      - BitBucket
+      - Docker
+      - AWS Amplify
+      - AWS Lightsail
+      - Vercel
+      - Netlify
+      - Digital Ocean
+      - Linode
+      - Firebase
+      - Jira
+      - ClickUp
+  
+  - category: "Languages & Other"
+    items:
+      - Go Lang
+      - Lua
+      - Neovim
+      - Kotlin
+
+social:
+  - name: "GitHub"
+    url: "https://github.com/wai-lin"
+    icon: "github"
+  
+  - name: "LinkedIn"
+    url: "https://www.linkedin.com/in/wailin-aung/"
+    icon: "linkedin"
+  
+  - name: "Email"
+    url: "mailto:dev.wailin@gmail.com"
+    icon: "email"
+
+experience:
+  - title: "Freelance Developer"
+    company: ""
+    period: "April 2025 - Present"
+    description: "Consulted a small development team. Developed a Nuxt.JS based website with firebase for a client. Maintained an existing student booking system for the Ministry of Higher Education, Science, Research and Innovation Thailand using React.JS."
+
+  - title: "Lead Software Engineer"
+    company: "KLink Myanmar"
+    period: "June 2023 - March 2025"
+    description: "Manage and guide 10+ developers. Standardized frontend stack (React.js, TypeScript, TailwindCSS, AWS Amplify). Led PoCs for new technologies. Implemented LinkusSDK for phone integration and Design System using ShadcnUI."
+  
+  - title: "Frontend Software Engineer"
+    company: "KBZ Bank"
+    period: "Nov 2021 - May 2023"
+    description: "Led migration from JavaScript to TypeScript for frontend team. Developed Self Service Banking Portal. Implemented Cash Management System and Survey platform using React.js and OracleDB."
+  
+  - title: "Senior Frontend Developer"
+    company: "Nexlabs"
+    period: "Apr 2021 - Oct 2021"
+    description: "Implemented Video Call Web Application for Pun Hlaing Hospital. Trained interns. Worked on Microfinance App and WeTicket Seating Planner using Nuxt.js."
+  
+  - title: "Frontend Web Developer"
+    company: "Nexlabs"
+    period: "Jul 2019 - Apr 2021"
+    description: "Developed Mingalar Cinema KBZ Pay Mini App with Nuxt.js. Created We Ticket ticketing platform. Built U=U Campaign web platform with Firebase for HIV awareness."
+  
+  - title: "Web Developer Intern"
+    company: "Nexlabs"
+    period: "Sep 2018 - Nov 2018"
+    description: "Developed Quotation Calculator using Vue.js. Learned Docker, Nginx, and Apache deployment."
+
+  - title: "Intern Developer"
+    company: "NewsWest Minister Institude"
+    period: "Sep 2017 - Nov 2017"
+    description: "Developed Check-in/Check-out system using PHP CI."
+
+education:
+  - schoolName: "Harbour.Space @ University of Thai Chamber of Commerce"
+    degree: "M.Sc (Master of Computer Science)"
+    year: "2024 - Present"
+
+  - schoolName: "University of Computer Studies, Yangon"
+    degree: "B.C.Sc (Bachelor of Computer Science)"
+    year: "2014 - 2019"
+
+personalInfo:
+  nationality: "Myanmar"
+  email: "dev.wailin@gmail.com"
+
+achievements:
+  - "Leadership and team management at KLink Myanmar"
+  - "Led JavaScript to TypeScript migration for KBZBank team"
+  - "Collaborated with UI/UX to standardize Design System"
+  - "Mentored 3+ batches of interns at Nexlabs"
+  - "Tech Organizer at 2019 ITCamp UCSY"
+  - "Volunteer at 2018 BarCamp Yangon"
+
+languages:
+  - language: "Myanmar"
+    proficiency: "Native"
+  - language: "English"
+    proficiency: "Intermediate"
