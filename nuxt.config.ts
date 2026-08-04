@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 	vite: {
 		plugins: [tailwindcss()],
 		optimizeDeps: {
-			include: ["@nuxtjs/mdc"],
+			// include: ["@nuxtjs/mdc"],
 		},
 	},
 	css: ["@/assets/css/main.css"],

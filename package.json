@@ -11,9 +11,13 @@
 		"prepare": "vp config"
 	},
 	"dependencies": {
+		"@lucide/vue": "^1.28.0",
 		"@nuxt/content": "^3.15.2",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
 		"nuxt": "^4.5.1",
 		"nuxt-studio": "1.7.0",
+		"tailwind-merge": "^3.6.0",
 		"vue": "^3.5.40",
 		"vue-router": "^5.2.0",
 		"zod": "^4.4.3"

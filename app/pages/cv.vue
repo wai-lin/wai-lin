@@ -1,0 +1,108 @@
+<script setup lang="ts">
+import { MapPin, Mail } from "@lucide/vue";
+
+useHead({
+	title: `CV — ${profile.name}`,
+	meta: [
+		{
+			name: "description",
+			content: `Curriculum vitae for ${profile.name}, ${profile.role}.`,
+		},
+	],
+});
+</script>
+
+<template>
+	<div class="mx-auto max-w-3xl px-6 py-12 md:py-16 print:py-0">
+		<!-- Action bar (hidden when printing) -->
+		<div
+			class="border-border mb-10 flex flex-col gap-4 border-b pb-8 sm:flex-row sm:items-center sm:justify-between print:hidden"
+		>
+			<div>
+				<p class="text-accent font-mono text-xs tracking-widest uppercase">Curriculum Vitae</p>
+				<p class="text-muted-foreground mt-2 text-sm">
+					A one-page summary, ready for job applications.
+				</p>
+			</div>
+			<DownloadCvButton />
+		</div>
+
+		<!-- Resume document -->
+		<article class="print:text-black">
+			<header class="border-border border-b pb-6">
+				<h1 class="text-3xl font-semibold tracking-tight md:text-4xl">{{ profile.name }}</h1>
+				<p class="text-accent mt-1 font-mono text-sm">{{ profile.role }}</p>
+				<div class="text-muted-foreground mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+					<span class="inline-flex items-center gap-1.5">
+						<MapPin class="size-4" aria-hidden="true" />
+						{{ profile.location }}
+					</span>
+					<a
+						:href="`mailto:${profile.email}`"
+						class="hover:text-foreground inline-flex items-center gap-1.5"
+					>
+						<Mail class="size-4" aria-hidden="true" />
+						{{ profile.email }}
+					</a>
+					<a
+						v-for="s in profile.socials.filter((s) => s.label !== 'Email')"
+						:key="s.label"
+						:href="s.href"
+						class="hover:text-foreground"
+						target="_blank"
+						rel="noreferrer"
+					>
+						{{ s.label }}: {{ s.handle }}
+					</a>
+				</div>
+			</header>
+
+			<!-- Summary -->
+			<section class="border-border border-b py-6">
+				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">Profile</h2>
+				<p class="mt-3 leading-relaxed text-pretty">{{ profile.longBio[0] }}</p>
+			</section>
+
+			<!-- Experience -->
+			<section class="border-border border-b py-6">
+				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">
+					Experience
+				</h2>
+				<div class="mt-4 flex flex-col gap-6">
+					<div v-for="job in experiences" :key="`${job.company}-${job.period}`">
+						<div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
+							<h3 class="font-medium">
+								{{ job.role }} <span class="text-muted-foreground">· {{ job.company }}</span>
+							</h3>
+							<span class="text-muted-foreground font-mono text-xs">{{ job.period }}</span>
+						</div>
+						<p class="text-muted-foreground mt-1 text-sm leading-relaxed text-pretty">
+							{{ job.summary }}
+						</p>
+						<ul class="mt-2 flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+							<li v-for="h in job.highlights" :key="h">{{ h }}</li>
+						</ul>
+						<p class="text-muted-foreground mt-2 font-mono text-xs">
+							{{ job.stack.join(" · ") }}
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Skills -->
+			<section class="py-6">
+				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">Skills</h2>
+				<dl class="mt-4 flex flex-col gap-3">
+					<div
+						v-for="group in skillGroups"
+						:key="group.category"
+						class="flex flex-col gap-1 sm:flex-row sm:gap-4"
+					>
+						<dt class="w-32 shrink-0 text-sm font-medium">{{ group.category }}</dt>
+						<dd class="text-muted-foreground text-sm">{{ group.skills.join(", ") }}</dd>
+					</div>
+				</dl>
+			</section>
+		</article>
+	</div>
+</template>

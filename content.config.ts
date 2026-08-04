@@ -3,14 +3,25 @@ import z from "zod";
 
 export default defineContentConfig({
 	collections: {
-		personalBio: defineCollection({
+		profile: defineCollection({
 			type: "data",
-			source: "personal-bio.yaml",
+			source: "profile.yaml",
 			schema: z.object({
 				name: z.string(),
+				role: z.string(),
+				location: z.string(),
+				availability: z.string(),
 				email: z.string(),
-				phone: z.string(),
-				address: z.string(),
+				shortBio: z.string(),
+				longBio: z.string(),
+				socials: z.array(
+					z.object({
+						label: z.string(),
+						handle: z.string(),
+						href: z.string(),
+					}),
+				),
+				image: z.string(),
 			}),
 		}),
 		blogs: defineCollection({
