@@ -11,9 +11,12 @@
 		"prepare": "vp config"
 	},
 	"dependencies": {
+		"@nuxt/content": "^3.15.2",
 		"nuxt": "^4.5.1",
+		"nuxt-studio": "1.7.0",
 		"vue": "^3.5.40",
-		"vue-router": "^5.2.0"
+		"vue-router": "^5.2.0",
+		"zod": "^4.4.3"
 	},
 	"devDependencies": {
 		"@tailwindcss/vite": "^4.3.3",

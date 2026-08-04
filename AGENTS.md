@@ -15,10 +15,14 @@ Docs are local at `node_modules/vite-plus/docs` or online at https://viteplus.de
 
 <!--VITE PLUS END-->
 
-<!--NUXT START-->
+<!--Project START-->
 
 # Nuxt Conventions
 
-Reference on nuxt [here](https://nuxt.com/llms.txt)
+References:
 
-<!--NUXT END-->
+- nuxt [here](https://nuxt.com/llms.txt)
+- nuxt content [here](https://content.nuxt.com/llms.txt)
+- nuxt studio [here](https://studio.nuxt.com/llms.txt)
+
+<!--Project END-->

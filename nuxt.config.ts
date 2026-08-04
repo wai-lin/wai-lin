@@ -4,8 +4,29 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
 	devtools: { enabled: true },
+	modules: ["@nuxt/content", "nuxt-studio"],
 	vite: {
 		plugins: [tailwindcss()],
+		optimizeDeps: {
+			include: ["@nuxtjs/mdc"],
+		},
 	},
 	css: ["@/assets/css/main.css"],
+	content: {
+		experimental: { sqliteConnector: "native" },
+	},
+	nitro: {
+		preset: "cloudflare_module",
+		cloudflare: {
+			deployConfig: true,
+			wrangler: {
+				d1_databases: [
+					{
+						binding: "DB",
+						database_name: "portfolio",
+					},
+				],
+			},
+		},
+	},
 });
