@@ -25,16 +25,17 @@ const skillGroups = computed(() => {
 	return skills.value?.groups ?? [];
 });
 
-useHead({
+useSeoMeta({
 	title: computed(() => `CV — ${profile.value?.name}`),
-	meta: [
-		{
-			name: "description",
-			content: computed(() =>
-				profile.value ? `Curriculum vitae for ${profile.value.name}, ${profile.value.role}.` : "",
-			),
-		},
-	],
+	ogTitle: computed(() => `CV — ${profile.value?.name}`),
+	description: computed(() =>
+		profile.value ? `Curriculum vitae for ${profile.value.name}, ${profile.value.role}.` : "",
+	),
+	ogDescription: computed(() =>
+		profile.value ? `Curriculum vitae for ${profile.value.name}, ${profile.value.role}.` : "",
+	),
+	ogImage: "/og-cv.png",
+	twitterCard: "summary_large_image",
 });
 </script>
 

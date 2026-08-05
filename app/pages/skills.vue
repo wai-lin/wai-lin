@@ -7,14 +7,15 @@ const skillGroups = computed(() => {
 	return skills.value?.groups ?? [];
 });
 
-useHead({
+const description = "The languages, frameworks and tools I use to design, build and ship software.";
+
+useSeoMeta({
 	title: "Skills",
-	meta: [
-		{
-			name: "description",
-			content: "The languages, frameworks and tools I use to design, build and ship software.",
-		},
-	],
+	ogTitle: "Skills",
+	description,
+	ogDescription: description,
+	ogImage: "/og-skills.png",
+	twitterCard: "summary_large_image",
 });
 </script>
 

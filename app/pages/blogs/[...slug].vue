@@ -9,12 +9,17 @@ const { data: page } = await useAsyncData(route.path, () => {
 
 const { data: nextPost } = await useAsyncData(`next-${route.path}`, () => {
 	return queryCollectionItemSurroundings("blogs", route.path, {
-		navigation: { fields: ["title"] },
-	}).then((surround) => surround.next);
+		fields: ["title"],
+	}).then((surround) => surround[1]);
 });
 
-useHead({
+useSeoMeta({
 	title: computed(() => page.value?.title ?? "Post"),
+	ogTitle: computed(() => page.value?.title),
+	description: computed(() => page.value?.description),
+	ogDescription: computed(() => page.value?.description),
+	ogImage: "/og-blog.png",
+	twitterCard: "summary_large_image",
 });
 </script>
 

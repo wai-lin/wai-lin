@@ -3,15 +3,16 @@ const { data: experiences } = await useAsyncData("experiences", () => {
 	return queryCollection("experiences").order("stem", "DESC").all();
 });
 
-useHead({
+const description =
+	"Work history and professional experience — the teams, roles and problems I have worked on over the years.";
+
+useSeoMeta({
 	title: "Experience",
-	meta: [
-		{
-			name: "description",
-			content:
-				"Work history and professional experience — the teams, roles and problems I have worked on over the years.",
-		},
-	],
+	ogTitle: "Experience",
+	description,
+	ogDescription: description,
+	ogImage: "/og-experience.png",
+	twitterCard: "summary_large_image",
 });
 </script>
 

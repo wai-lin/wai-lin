@@ -5,6 +5,11 @@ export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
 	devtools: { enabled: true },
 	modules: ["@nuxt/content", "nuxt-studio"],
+	app: {
+		head: {
+			link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+		},
+	},
 	vite: {
 		plugins: [tailwindcss()],
 	},

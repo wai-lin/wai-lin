@@ -5,15 +5,16 @@ const { data: posts } = await useAsyncData("blogs-list", () => {
 	return queryCollection("blogs").order("date", "DESC").all();
 });
 
-useHead({
+const description =
+	"Writing about software engineering, product craft, developer experience and the occasional lesson learned.";
+
+useSeoMeta({
 	title: "Blog",
-	meta: [
-		{
-			name: "description",
-			content:
-				"Writing about software engineering, product craft, developer experience and the occasional lesson learned.",
-		},
-	],
+	ogTitle: "Blog",
+	description,
+	ogDescription: description,
+	ogImage: "/og-blog.png",
+	twitterCard: "summary_large_image",
 });
 </script>
 

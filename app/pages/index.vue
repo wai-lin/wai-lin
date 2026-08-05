@@ -41,8 +41,13 @@ const skillGroups = computed(() => {
 	return skills.value?.groups ?? [];
 });
 
-useHead({
+useSeoMeta({
 	title: computed(() => `${profile.value?.name} — ${profile.value?.role}`),
+	ogTitle: computed(() => `${profile.value?.name} — ${profile.value?.role}`),
+	description: computed(() => profile.value?.shortBio),
+	ogDescription: computed(() => profile.value?.shortBio),
+	ogImage: "/og-default.png",
+	twitterCard: "summary_large_image",
 });
 </script>
 

@@ -13,14 +13,16 @@ const others = computed(() => {
 	return (projects.value ?? []).filter((p) => !p.featured);
 });
 
-useHead({
+const description =
+	"A selection of products, tools and open-source projects I have designed and built.";
+
+useSeoMeta({
 	title: "Projects",
-	meta: [
-		{
-			name: "description",
-			content: "A selection of products, tools and open-source projects I have designed and built.",
-		},
-	],
+	ogTitle: "Projects",
+	description,
+	ogDescription: description,
+	ogImage: "/og-projects.png",
+	twitterCard: "summary_large_image",
 });
 </script>
 
