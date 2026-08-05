@@ -8,6 +8,13 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+			script: [
+				{
+					src: "/stats.js",
+					defer: true,
+					"data-website-id": "cd1bbc87-798e-4620-8a31-71bcf4aad926",
+				},
+			],
 		},
 	},
 	vite: {
@@ -28,6 +35,11 @@ export default defineNuxtConfig({
 			commit: {
 				messagePrefix: "content:",
 			},
+		},
+	},
+	routeRules: {
+		"/stats.js": {
+			proxy: "https://cloud.umami.is/script.js",
 		},
 	},
 	nitro: {
