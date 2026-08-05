@@ -1,0 +1,15 @@
+company: KBZ Bank
+role: Frontend Software Engineer
+period: "Nov 2021 - May 2023"
+location: ""
+summary: "Led migration from JavaScript to TypeScript for frontend team. Developed Self Service Banking Portal. Implemented Cash Management System and Survey platform using React.js and OracleDB."
+highlights:
+  - Led migration from JavaScript to TypeScript for entire frontend team
+  - Developed Self Service Banking Portal
+  - Implemented Cash Management System
+  - Built Survey platform using React.js and OracleDB
+stack:
+  - React.js
+  - TypeScript
+  - OracleDB
+  - REST APIs

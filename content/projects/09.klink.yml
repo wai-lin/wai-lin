@@ -1,0 +1,14 @@
+slug: klink
+name: KLink
+tagline: Comprehensive dashboard system with phone integration
+description: Lead the development of a comprehensive dashboard system. Implemented LinkusSDK for Yeastar phone integration enabling phone calls within the React.JS dashboard. Standardized the tech stack with React.js, TypeScript, TailwindCSS, and AWS Amplify.
+year: "2024"
+role: Lead Developer
+stack:
+  - React.js
+  - TypeScript
+  - TailwindCSS
+  - AWS Amplify
+  - LinkusSDK
+featured: true
+href: https://www.klink.cloud

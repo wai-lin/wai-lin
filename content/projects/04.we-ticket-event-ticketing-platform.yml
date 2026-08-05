@@ -1,0 +1,12 @@
+slug: we-ticket-event-ticketing-platform
+name: We Ticket
+tagline: Event ticketing platform with seating planner
+description: Built a comprehensive ticketing platform where users can browse, book, and purchase tickets for events and shows. Implemented seating planner, payment integration, and ticket management system.
+year: "2021"
+role: Developer
+stack:
+  - Nuxt.js
+  - Vue.js
+  - TypeScript
+featured: false
+href: "#"

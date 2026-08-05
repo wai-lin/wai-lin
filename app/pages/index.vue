@@ -5,12 +5,12 @@ const { data: profile } = await useAsyncData("profile", () => {
 	return queryCollection("profile").first();
 });
 
-const { data: experiences } = await useAsyncData("experiences-home", () => {
-	return queryCollection("experiences").all();
+const { data: currentRole } = await useAsyncData("experiences-home", () => {
+	return queryCollection("experiences").order("stem", "DESC").first();
 });
 
 const { data: projects } = await useAsyncData("projects-home", () => {
-	return queryCollection("projects").all();
+	return queryCollection("projects").order("stem", "DESC").all();
 });
 
 const { data: skills } = await useAsyncData("skills-home", () => {
@@ -23,10 +23,6 @@ const { data: latestPost } = await useAsyncData("latest-post", () => {
 
 const featured = computed(() => {
 	return (projects.value ?? []).filter((p) => p.featured).slice(0, 3);
-});
-
-const currentRole = computed(() => {
-	return experiences.value?.[0];
 });
 
 const skillGroups = computed(() => {
@@ -82,7 +78,7 @@ useHead({
 						class="border-border bg-muted relative mx-auto aspect-square w-48 overflow-hidden rounded-xl border md:w-full"
 					>
 						<img
-							src="/portrait.png"
+							src="/portrait.webp"
 							:alt="`Portrait of ${profile.name}`"
 							class="size-full object-cover"
 							loading="eager"

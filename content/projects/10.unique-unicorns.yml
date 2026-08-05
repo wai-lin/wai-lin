@@ -1,0 +1,13 @@
+slug: unique-unicorns
+name: Unique Unicorns
+tagline: Digital experience for a childcare centre
+description: Designed a comprehensive digital experience for an owner-operated childcare centre in Townsville. Created a warm, welcoming platform that showcases their Reggio Emilia teaching philosophy, extended care hours, qualified staff, and specialized facilities.
+year: "2024"
+role: Developer
+stack:
+  - Nuxt.js
+  - Vue.js
+  - Firebase
+  - Netlify
+featured: false
+href: https://www.uniqueunicorns.com.au/

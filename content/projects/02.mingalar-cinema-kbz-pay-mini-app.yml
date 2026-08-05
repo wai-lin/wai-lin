@@ -1,0 +1,12 @@
+slug: mingalar-cinema-kbz-pay-mini-app
+name: Mingalar Cinema KBZ Pay Mini App
+tagline: Movie booking and ticketing mini app
+description: Developed a movie booking and ticketing mini app within KBZ Pay application. Users can choose movies, cinemas, select seats, and purchase tickets directly within the KBZ Pay ecosystem.
+year: "2020"
+role: Developer
+stack:
+  - Nuxt.js
+  - Vue.js
+  - Firebase
+featured: true
+href: https://www.nexlabs.co/case-studies/mingalar-cinema

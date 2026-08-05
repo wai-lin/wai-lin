@@ -1,0 +1,12 @@
+slug: student-booking-system
+name: Student Booking System
+tagline: Student booking system for Thailand's Ministry of Higher Education
+description: Maintained an existing student booking system for the Ministry of Higher Education, Science, Research and Innovation Thailand.
+year: "2025"
+role: Developer
+stack:
+  - React.js
+  - Next.js
+  - ShadcnUI
+featured: false
+href: "#"

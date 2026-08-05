@@ -1,0 +1,12 @@
+slug: design-system-with-shadcnui
+name: Design System with ShadcnUI
+tagline: Standardized UI component library
+description: Implemented a comprehensive Design System for KLink using ShadcnUI components and TailwindCSS. Standardized UI components across all applications for consistency and maintainability.
+year: "2024"
+role: Lead Developer
+stack:
+  - React.js
+  - ShadcnUI
+  - TailwindCSS
+featured: false
+href: "#"

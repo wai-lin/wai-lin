@@ -1,0 +1,11 @@
+slug: u-u-campaign-platform
+name: U=U Campaign Platform
+tagline: HIV awareness platform for Myanmar's Ministry of Health
+description: Built a web platform for Myanmar's Minister of Health Organization to promote HIV awareness. HIV positive individuals can share stories and connect with others through the platform.
+year: "2020"
+role: Developer
+stack:
+  - Vue.js
+  - Firebase
+featured: false
+href: https://www.nexlabs.co/case-studies/u-u

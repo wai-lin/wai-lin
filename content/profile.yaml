@@ -1,25 +1,21 @@
+name: Wai Lin Aung
+role: Fullstack Web Developer
+location: Myanmar
 availability: Available for select freelance work
-email: hello@ravimenon.dev
-image: /portrait.png
-location: Berlin, Germany
+email: dev.wailin@gmail.com
+shortBio: I'm Wai Lin Aung (call me Aung) from Myanmar - a web developer and tote-bag enthusiast with 8+ years crafting WebUIs and JS libraries. I code in both VSCode and Neovim, and when I'm not building things, you'll find me cooking or playing badminton.
 longBio:
-  - I am a full-stack engineer with over eight years of experience designing and shipping web applications used by millions of people. My focus is on the intersection of solid engineering and thoughtful product design — writing code that is maintainable, and building interfaces that people genuinely enjoy using.
-  - I have worked across early-stage startups and larger product teams, leading frontend architecture, building resilient backend services, and mentoring engineers along the way. I am happiest when I am close to the problem, talking to users, and iterating quickly.
-  - Outside of work you will usually find me contributing to open source, writing about the craft of software, or hiking somewhere without cell service.
-  - ""
-name: Ravi Menon
-role: Full-Stack Software Engineer
-shortBio: I build fast, accessible products for the web. I care about the details that make software feel effortless — from database queries to the final pixel.
+  - I'm Wai Lin Aung (call me Aung) from Myanmar - a web developer and tote-bag enthusiast with 8+ years crafting WebUIs and JS libraries. I code in both VSCode and Neovim, and when I'm not building things, you'll find me cooking or playing badminton.
+  - Passionate about Vue.js, React.js, TypeScript, and modern web development. Currently freelancing while pursuing a Master's degree, I build scalable applications with Node.js and cloud platforms.
+  - Expert in creating design systems, leading development teams, and mentoring engineers to excellence.
 socials:
   - label: GitHub
-    handle: "@ravimenon"
-    href: https://github.com
+    handle: "@wai-lin"
+    href: https://github.com/wai-lin
   - label: LinkedIn
-    handle: in/ravimenon
-    href: https://linkedin.com
-  - label: X
-    handle: "@ravimenon"
-    href: https://x.com
+    handle: in/wailin-aung
+    href: https://www.linkedin.com/in/wailin-aung/
   - label: Email
-    handle: hello@ravimenon.dev
-    href: mailto:hello@ravimenon.dev
+    handle: dev.wailin@gmail.com
+    href: mailto:dev.wailin@gmail.com
+image: /portrait.webp

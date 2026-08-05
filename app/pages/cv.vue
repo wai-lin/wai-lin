@@ -6,11 +6,19 @@ const { data: profile } = await useAsyncData("profile-cv", () => {
 });
 
 const { data: experiences } = await useAsyncData("experiences-cv", () => {
-	return queryCollection("experiences").all();
+	return queryCollection("experiences").order("stem", "DESC").all();
 });
 
 const { data: skills } = await useAsyncData("skills-cv", () => {
 	return queryCollection("skills").first();
+});
+
+const { data: education } = await useAsyncData("education-cv", () => {
+	return queryCollection("education").all();
+});
+
+const { data: achievements } = await useAsyncData("achievements-cv", () => {
+	return queryCollection("achievements").first();
 });
 
 const skillGroups = computed(() => {
@@ -90,25 +98,43 @@ useHead({
 					<div v-for="job in experiences" :key="`${job.company}-${job.period}`">
 						<div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
 							<h3 class="font-medium">
-								{{ job.role }} <span class="text-muted-foreground">· {{ job.company }}</span>
+								{{ job.role }}
+								<span v-if="job.company" class="text-muted-foreground">· {{ job.company }}</span>
 							</h3>
 							<span class="text-muted-foreground font-mono text-xs">{{ job.period }}</span>
 						</div>
 						<p class="text-muted-foreground mt-1 text-sm leading-relaxed text-pretty">
 							{{ job.summary }}
 						</p>
-						<ul class="mt-2 flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+						<ul
+							v-if="job.highlights.length"
+							class="mt-2 flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed"
+						>
 							<li v-for="h in job.highlights" :key="h">{{ h }}</li>
 						</ul>
-						<p class="text-muted-foreground mt-2 font-mono text-xs">
+						<p v-if="job.stack.length" class="text-muted-foreground mt-2 font-mono text-xs">
 							{{ job.stack.join(" · ") }}
 						</p>
 					</div>
 				</div>
 			</section>
 
+			<!-- Education -->
+			<section v-if="education?.length" class="border-border border-b py-6">
+				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">Education</h2>
+				<div class="mt-4 flex flex-col gap-4">
+					<div v-for="edu in education" :key="edu.schoolName">
+						<div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
+							<h3 class="font-medium">{{ edu.degree }}</h3>
+							<span class="text-muted-foreground font-mono text-xs">{{ edu.year }}</span>
+						</div>
+						<p class="text-muted-foreground text-sm">{{ edu.schoolName }}</p>
+					</div>
+				</div>
+			</section>
+
 			<!-- Skills -->
-			<section class="py-6">
+			<section class="border-border border-b py-6">
 				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">Skills</h2>
 				<dl class="mt-4 flex flex-col gap-3">
 					<div
@@ -120,6 +146,16 @@ useHead({
 						<dd class="text-muted-foreground text-sm">{{ group.skills.join(", ") }}</dd>
 					</div>
 				</dl>
+			</section>
+
+			<!-- Achievements -->
+			<section v-if="achievements?.items?.length" class="py-6">
+				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">
+					Achievements
+				</h2>
+				<ul class="mt-4 flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+					<li v-for="item in achievements.items" :key="item">{{ item }}</li>
+				</ul>
 			</section>
 		</article>
 	</div>

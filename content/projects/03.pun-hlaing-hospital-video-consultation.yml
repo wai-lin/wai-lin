@@ -1,0 +1,12 @@
+slug: pun-hlaing-hospital-video-consultation
+name: Pun Hlaing Hospital Video Consultation
+tagline: Remote video consultation platform
+description: Implemented a video call web application enabling patients to consult with doctors remotely. Doctors can provide medical notes and digital prescriptions through the platform.
+year: "2021"
+role: Developer
+stack:
+  - React.js
+  - WebRTC
+  - Node.js
+featured: false
+href: https://www.nexlabs.co/case-studies/pun-hlaing-telemedicine-app-ongoing

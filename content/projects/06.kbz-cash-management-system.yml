@@ -1,0 +1,12 @@
+slug: kbz-cash-management-system
+name: KBZ Cash Management System
+tagline: Cash flow control across KBZ Bank branches
+description: Implemented a comprehensive Cash Management System that controls all cash flow across KBZ Bank branches. Built with React.js frontend and OracleDB for robust data management.
+year: "2022"
+role: Frontend Engineer
+stack:
+  - React.js
+  - OracleDB
+  - TypeScript
+featured: false
+href: "#"

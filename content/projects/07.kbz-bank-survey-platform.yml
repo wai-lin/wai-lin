@@ -1,0 +1,10 @@
+slug: kbz-bank-survey-platform
+name: KBZ Bank Survey Platform
+tagline: Customer feedback and satisfaction survey system
+description: Developed a survey system for KBZ Bank customers to provide feedback on their banking experience. Integrated with backend to collect and analyze customer satisfaction metrics.
+year: "2022"
+role: Developer
+stack:
+  - React.js
+featured: false
+href: "#"

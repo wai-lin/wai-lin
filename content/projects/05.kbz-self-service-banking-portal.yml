@@ -1,0 +1,12 @@
+slug: kbz-self-service-banking-portal
+name: KBZ Self Service Banking Portal
+tagline: Online bank account opening portal
+description: Developed a comprehensive Self Service Banking Portal allowing customers to open new bank accounts online. Led the migration from JavaScript to TypeScript for the entire frontend team. Implemented with React.js and modern tooling.
+year: "2022"
+role: Frontend Engineer
+stack:
+  - React.js
+  - TypeScript
+  - REST APIs
+featured: true
+href: https://selfservice.kbzbank.com

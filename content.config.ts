@@ -66,6 +66,22 @@ export default defineContentConfig({
 				),
 			}),
 		}),
+		education: defineCollection({
+			type: "data",
+			source: "education/*.yml",
+			schema: z.object({
+				schoolName: z.string(),
+				degree: z.string(),
+				year: z.string(),
+			}),
+		}),
+		achievements: defineCollection({
+			type: "data",
+			source: "achievements.yml",
+			schema: z.object({
+				items: z.array(z.string()),
+			}),
+		}),
 		blogs: defineCollection({
 			type: "page",
 			source: "blogs/*.md",

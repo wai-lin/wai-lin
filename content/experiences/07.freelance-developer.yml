@@ -1,0 +1,13 @@
+company: ""
+role: Freelance Developer
+period: "April 2025 - Present"
+location: ""
+summary: "Consulted a small development team. Developed a Nuxt.JS based website with Firebase for a client. Maintained an existing student booking system for the Ministry of Higher Education, Science, Research and Innovation Thailand using React.JS."
+highlights:
+  - Consulted a small development team
+  - Developed a Nuxt.JS based website with Firebase for a client
+  - Maintained student booking system for Ministry of Higher Education Thailand
+stack:
+  - Nuxt.js
+  - React.js
+  - Firebase

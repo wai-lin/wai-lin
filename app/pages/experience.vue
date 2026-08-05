@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: experiences } = await useAsyncData("experiences", () => {
-	return queryCollection("experiences").all();
+	return queryCollection("experiences").order("stem", "DESC").all();
 });
 
 useHead({
