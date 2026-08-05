@@ -15,10 +15,11 @@ groups:
     skills:
       - Nest.js
       - Express.js
+      - SQLite
+      - PostgreSQL
       - MySQL
       - MongoDB
-      - OracleDB
-      - REST APIs
+      - REST API
   - category: Tools & DevOps
     description: Shipping and operating software with confidence.
     skills:
@@ -28,6 +29,7 @@ groups:
       - BitBucket
       - Docker
       - Cloudflare
+      - Google Cloud Platform
       - AWS Amplify
       - AWS Lightsail
       - Vercel
