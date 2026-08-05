@@ -37,7 +37,7 @@ useSeoMeta({
 		<!-- Featured -->
 		<section class="border-border border-b">
 			<div class="mx-auto max-w-5xl px-6 py-16">
-				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">Featured</h2>
+				<UiLabel tag="h2">Featured</UiLabel>
 				<div class="mt-8 grid gap-6 lg:grid-cols-3">
 					<article
 						v-for="project in featured"
@@ -45,22 +45,18 @@ useSeoMeta({
 						class="group border-border bg-card hover:border-accent/50 flex flex-col rounded-xl border p-6 transition-colors"
 					>
 						<div class="flex items-center justify-between">
-							<h3 class="text-lg font-semibold tracking-tight">{{ project.name }}</h3>
-							<span class="text-muted-foreground font-mono text-xs">{{ project.year }}</span>
+							<UiTitle :level="3">{{ project.name }}</UiTitle>
+							<UiLabel tag="span" class="tracking-normal normal-case">{{ project.year }}</UiLabel>
 						</div>
-						<p class="text-accent mt-1 text-sm font-medium">{{ project.tagline }}</p>
-						<p class="text-muted-foreground mt-4 flex-1 text-sm leading-relaxed text-pretty">
-							{{ project.description }}
-						</p>
+						<UiText variant="muted" class="!text-accent mt-1 font-medium">{{
+							project.tagline
+						}}</UiText>
+						<UiText variant="muted" class="mt-4 flex-1">{{ project.description }}</UiText>
 
 						<div class="mt-5 flex flex-wrap gap-1.5">
-							<span
-								v-for="tech in project.stack"
-								:key="tech"
-								class="border-border text-muted-foreground rounded border px-2 py-0.5 font-mono text-[11px]"
-							>
+							<UiBadge v-for="tech in project.stack" :key="tech">
 								{{ tech }}
-							</span>
+							</UiBadge>
 						</div>
 
 						<div class="border-border mt-6 flex items-center gap-4 border-t pt-4 text-sm">
@@ -90,9 +86,7 @@ useSeoMeta({
 		<!-- Other projects -->
 		<section>
 			<div class="mx-auto max-w-5xl px-6 py-16">
-				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">
-					More projects
-				</h2>
+				<UiLabel tag="h2">More projects</UiLabel>
 				<ul class="divide-border border-border mt-8 divide-y rounded-xl border">
 					<li v-for="project in others" :key="project.slug">
 						<a
@@ -101,24 +95,18 @@ useSeoMeta({
 						>
 							<div class="sm:max-w-md">
 								<div class="flex items-center gap-3">
-									<h3 class="font-semibold tracking-tight">{{ project.name }}</h3>
-									<span class="text-muted-foreground font-mono text-xs">
+									<UiTitle :level="3">{{ project.name }}</UiTitle>
+									<UiLabel tag="span" class="tracking-normal normal-case">
 										{{ project.year }}
-									</span>
+									</UiLabel>
 								</div>
-								<p class="text-muted-foreground mt-1 text-sm text-pretty">
-									{{ project.tagline }}
-								</p>
+								<UiText variant="muted" class="mt-1">{{ project.tagline }}</UiText>
 							</div>
 							<div class="flex items-center gap-4">
 								<div class="hidden flex-wrap gap-1.5 sm:flex">
-									<span
-										v-for="tech in project.stack"
-										:key="tech"
-										class="border-border text-muted-foreground rounded border px-2 py-0.5 font-mono text-[11px]"
-									>
+									<UiBadge v-for="tech in project.stack" :key="tech">
 										{{ tech }}
-									</span>
+									</UiBadge>
 								</div>
 								<ArrowUpRight
 									class="text-muted-foreground size-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

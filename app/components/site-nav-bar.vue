@@ -30,8 +30,8 @@ function isActive(href: string) {
 	>
 		<nav aria-label="Primary" class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
 			<NuxtLink to="/" class="group flex flex-col leading-tight">
-				<span class="text-sm font-semibold tracking-tight">{{ profile?.name }}</span>
-				<span class="text-muted-foreground font-mono text-xs">{{ profile?.role }}</span>
+				<UiTitle :level="6" class="!text-sm">{{ profile?.name }}</UiTitle>
+				<UiLabel tag="span">{{ profile?.role }}</UiLabel>
 			</NuxtLink>
 
 			<ul class="hidden items-center gap-1 md:flex">

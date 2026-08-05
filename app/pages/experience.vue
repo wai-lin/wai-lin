@@ -38,40 +38,30 @@ useSeoMeta({
 						/>
 						<div class="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
 							<div>
-								<h2 class="text-xl font-semibold tracking-tight">{{ exp.role }}</h2>
-								<p class="text-muted-foreground">
+								<UiTitle :level="2" class="text-xl">{{ exp.role }}</UiTitle>
+								<UiText variant="muted" tag="p">
 									<span class="text-foreground">{{ exp.company }}</span> &middot; {{ exp.location }}
-								</p>
+								</UiText>
 							</div>
-							<span class="text-muted-foreground font-mono text-xs md:whitespace-nowrap">
-								{{ exp.period }}
-							</span>
+							<UiLabel tag="span" class="md:whitespace-nowrap">{{ exp.period }}</UiLabel>
 						</div>
 
-						<p class="mt-4 max-w-2xl leading-relaxed text-pretty">{{ exp.summary }}</p>
+						<UiText class="mt-4 max-w-2xl">{{ exp.summary }}</UiText>
 
-						<ul class="mt-4 max-w-2xl space-y-2">
-							<li
-								v-for="highlight in exp.highlights"
-								:key="highlight"
-								class="text-muted-foreground flex gap-3 text-sm"
-							>
+						<UiText variant="muted" tag="ul" class="mt-4 max-w-2xl space-y-2">
+							<li v-for="highlight in exp.highlights" :key="highlight" class="flex gap-3">
 								<span
 									class="bg-muted-foreground mt-2 size-1 shrink-0 rounded-full"
 									aria-hidden="true"
 								/>
 								<span class="text-pretty">{{ highlight }}</span>
 							</li>
-						</ul>
+						</UiText>
 
 						<div class="mt-5 flex flex-wrap gap-1.5">
-							<span
-								v-for="tech in exp.stack"
-								:key="tech"
-								class="border-border text-muted-foreground rounded border px-2 py-0.5 font-mono text-[11px]"
-							>
+							<UiBadge v-for="tech in exp.stack" :key="tech">
 								{{ tech }}
-							</span>
+							</UiBadge>
 						</div>
 						<span class="sr-only">{{ `Position ${index + 1} of ${experiences?.length}` }}</span>
 					</li>

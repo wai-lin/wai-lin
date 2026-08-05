@@ -34,26 +34,23 @@ useSeoMeta({
 							:to="post.path"
 							class="group hover:bg-secondary flex flex-col gap-3 p-8 transition-colors"
 						>
-							<div
-								class="text-muted-foreground flex flex-wrap items-center gap-3 font-mono text-xs"
+							<UiLabel
+								tag="div"
+								class="flex flex-wrap items-center gap-3 tracking-normal normal-case"
 							>
 								<span>{{ formatDate(post.date) }}</span>
 								<span aria-hidden="true">&middot;</span>
 								<span>{{ post.readingTime }}</span>
-							</div>
-							<h2 class="group-hover:text-accent text-xl font-semibold tracking-tight text-balance">
+							</UiLabel>
+							<UiTitle :level="2" class="group-hover:text-accent text-xl text-balance">
 								{{ post.title }}
-							</h2>
-							<p class="text-muted-foreground max-w-2xl text-pretty">{{ post.description }}</p>
+							</UiTitle>
+							<UiText variant="muted" class="max-w-2xl">{{ post.description }}</UiText>
 							<div class="mt-2 flex items-center justify-between">
 								<div class="flex flex-wrap gap-1.5">
-									<span
-										v-for="tag in post.tags"
-										:key="tag"
-										class="border-border text-muted-foreground rounded border px-2 py-0.5 font-mono text-[11px]"
-									>
+									<UiBadge v-for="tag in post.tags" :key="tag">
 										{{ tag }}
-									</span>
+									</UiBadge>
 								</div>
 								<span
 									class="text-muted-foreground group-hover:text-foreground inline-flex items-center gap-1 text-sm transition-colors"

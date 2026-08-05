@@ -34,14 +34,12 @@ useSeoMeta({
 				>
 					<div v-for="group in skillGroups" :key="group.category" class="bg-card p-8">
 						<div class="flex items-baseline justify-between">
-							<h2 class="text-lg font-semibold tracking-tight">{{ group.category }}</h2>
-							<span class="text-muted-foreground font-mono text-xs">
+							<UiTitle :level="3">{{ group.category }}</UiTitle>
+							<UiLabel tag="span" class="tracking-normal normal-case">
 								{{ group.skills.length.toString().padStart(2, "0") }}
-							</span>
+							</UiLabel>
 						</div>
-						<p class="text-muted-foreground mt-2 text-sm text-pretty">
-							{{ group.description }}
-						</p>
+						<UiText variant="muted" class="mt-2">{{ group.description }}</UiText>
 						<ul class="mt-5 flex flex-wrap gap-2">
 							<li
 								v-for="skill in group.skills"

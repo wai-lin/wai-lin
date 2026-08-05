@@ -11,10 +11,8 @@ const { data: profile } = await useAsyncData("profile-footer", () => {
 		<div class="mx-auto max-w-5xl px-6 py-12">
 			<div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
 				<div class="max-w-sm">
-					<p class="text-muted-foreground font-mono text-xs tracking-widest uppercase">
-						Get in touch
-					</p>
-					<p class="mt-3 text-lg text-balance">Have a project in mind or just want to say hello?</p>
+					<UiLabel tag="p">Get in touch</UiLabel>
+					<UiText class="mt-3 max-w-sm">Have a project in mind or just want to say hello?</UiText>
 					<a
 						v-if="profile"
 						:href="`mailto:${profile.email}`"
@@ -34,7 +32,7 @@ const { data: profile } = await useAsyncData("profile-footer", () => {
 						class="group text-muted-foreground hover:text-foreground flex items-center justify-between gap-4 text-sm transition-colors"
 					>
 						<span>{{ social.label }}</span>
-						<span class="font-mono text-xs">{{ social.handle }}</span>
+						<UiLabel tag="span" class="tracking-normal normal-case">{{ social.handle }}</UiLabel>
 					</a>
 				</nav>
 			</div>

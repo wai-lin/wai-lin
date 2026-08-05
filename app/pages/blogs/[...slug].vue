@@ -36,41 +36,31 @@ useSeoMeta({
 						All posts
 					</NuxtLink>
 
-					<div
-						class="text-muted-foreground mt-8 flex flex-wrap items-center gap-3 font-mono text-xs"
-					>
+					<UiLabel tag="div" class="mt-8 flex flex-wrap items-center gap-3">
 						<span>{{ formatDate(page.date) }}</span>
 						<span aria-hidden="true">&middot;</span>
 						<span>{{ page.readingTime }}</span>
-					</div>
-					<h1
-						class="mt-4 text-3xl leading-tight font-semibold tracking-tight text-balance md:text-4xl"
-					>
-						{{ page.title }}
-					</h1>
+					</UiLabel>
+					<UiTitle :level="1" class="mt-4">{{ page.title }}</UiTitle>
 					<div class="mt-6 flex flex-wrap gap-1.5">
-						<span
-							v-for="tag in page.tags"
-							:key="tag"
-							class="border-border text-muted-foreground rounded border px-2 py-0.5 font-mono text-[11px]"
-						>
+						<UiBadge v-for="tag in page.tags" :key="tag">
 							{{ tag }}
-						</span>
+						</UiBadge>
 					</div>
 				</div>
 			</header>
 
 			<div class="mx-auto max-w-3xl px-6 py-16">
-				<div class="prose">
+				<div class="prose leading-loose">
 					<ContentRenderer :value="page" />
 				</div>
 
 				<div v-if="nextPost" class="border-border mt-16 border-t pt-8">
-					<p class="text-muted-foreground font-mono text-xs tracking-widest uppercase">Next up</p>
+					<UiLabel tag="p">Next up</UiLabel>
 					<NuxtLink :to="nextPost.path" class="group mt-3 flex items-center justify-between gap-4">
-						<span class="group-hover:text-accent text-lg font-semibold tracking-tight text-balance">
+						<UiTitle :level="3" class="group-hover:text-accent text-lg text-balance">
 							{{ nextPost.title }}
-						</span>
+						</UiTitle>
 						<ArrowRight
 							class="text-muted-foreground size-5 shrink-0 transition-transform group-hover:translate-x-0.5"
 						/>

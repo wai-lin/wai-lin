@@ -46,7 +46,7 @@ useSeoMeta({
 			class="border-border mb-10 flex flex-col gap-4 border-b pb-8 sm:flex-row sm:items-center sm:justify-between print:hidden"
 		>
 			<div>
-				<p class="text-accent font-mono text-xs tracking-widest uppercase">Curriculum Vitae</p>
+				<UiLabel color="accent" tag="p">Curriculum Vitae</UiLabel>
 			</div>
 			<DownloadCvButton />
 		</div>
@@ -54,9 +54,9 @@ useSeoMeta({
 		<!-- Resume document -->
 		<article class="print:text-black">
 			<header class="border-border border-b pb-6">
-				<h1 class="text-3xl font-semibold tracking-tight md:text-4xl">{{ profile.name }}</h1>
-				<p class="text-accent mt-1 font-mono text-sm">{{ profile.role }}</p>
-				<div class="text-muted-foreground mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+				<UiTitle :level="1">{{ profile.name }}</UiTitle>
+				<UiText variant="muted" tag="p" class="mt-1 font-mono">{{ profile.role }}</UiText>
+				<UiText variant="muted" tag="div" class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
 					<span class="inline-flex items-center gap-1.5">
 						<MapPin class="size-4" aria-hidden="true" />
 						{{ profile.location }}
@@ -78,62 +78,66 @@ useSeoMeta({
 					>
 						{{ s.label }}: {{ s.handle }}
 					</a>
-				</div>
+				</UiText>
 			</header>
 
 			<!-- Summary -->
 			<section class="border-border border-b py-6">
-				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">Profile</h2>
-				<p class="mt-3 leading-relaxed text-pretty">{{ profile.longBio[0] }}</p>
+				<UiLabel tag="h2">Profile</UiLabel>
+				<UiText class="mt-3">{{ profile.longBio[0] }}</UiText>
 			</section>
 
 			<!-- Experience -->
 			<section class="border-border border-b py-6">
-				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">
-					Experience
-				</h2>
+				<UiLabel tag="h2">Experience</UiLabel>
 				<div class="mt-4 flex flex-col gap-6">
-					<div v-for="job in experiences" :key="`${job.company}-${job.period}`">
+					<div
+						v-for="(job, index) in experiences"
+						:key="`${job.company}-${job.period}`"
+						:class="{
+							'cv-break-after': index === 2,
+						}"
+					>
 						<div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
-							<h3 class="font-medium">
+							<UiTitle :level="3" class="font-medium tracking-normal">
 								{{ job.role }}
 								<span v-if="job.company" class="text-muted-foreground">· {{ job.company }}</span>
-							</h3>
-							<span class="text-muted-foreground font-mono text-xs">{{ job.period }}</span>
+							</UiTitle>
+							<UiLabel tag="span">{{ job.period }}</UiLabel>
 						</div>
-						<p class="text-muted-foreground mt-1 text-sm leading-relaxed text-pretty">
-							{{ job.summary }}
-						</p>
-						<ul
+						<UiText variant="body" class="mt-1 leading-normal">{{ job.summary }}</UiText>
+						<UiText
+							variant="muted"
+							tag="ul"
 							v-if="job.highlights.length"
-							class="mt-2 flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed"
+							class="mt-2 list-disc pl-5"
 						>
 							<li v-for="h in job.highlights" :key="h">{{ h }}</li>
-						</ul>
-						<p v-if="job.stack.length" class="text-muted-foreground mt-2 font-mono text-xs">
+						</UiText>
+						<UiText variant="muted" tag="p" v-if="job.stack.length" class="mt-2 font-mono text-xs">
 							{{ job.stack.join(" · ") }}
-						</p>
+						</UiText>
 					</div>
 				</div>
 			</section>
 
 			<!-- Education -->
-			<section v-if="education?.length" class="border-border border-b py-6">
-				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">Education</h2>
+			<section v-if="education?.length" class="border-border cv-break-before border-b py-6">
+				<UiLabel tag="h2">Education</UiLabel>
 				<div class="mt-4 flex flex-col gap-4">
 					<div v-for="edu in education" :key="edu.schoolName">
 						<div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
-							<h3 class="font-medium">{{ edu.degree }}</h3>
-							<span class="text-muted-foreground font-mono text-xs">{{ edu.year }}</span>
+							<UiTitle :level="3" class="font-medium tracking-normal">{{ edu.degree }}</UiTitle>
+							<UiLabel tag="span">{{ edu.year }}</UiLabel>
 						</div>
-						<p class="text-muted-foreground text-sm">{{ edu.schoolName }}</p>
+						<UiText variant="muted">{{ edu.schoolName }}</UiText>
 					</div>
 				</div>
 			</section>
 
 			<!-- Skills -->
 			<section class="border-border border-b py-6">
-				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">Skills</h2>
+				<UiLabel tag="h2">Skills</UiLabel>
 				<dl class="mt-4 flex flex-col gap-3">
 					<div
 						v-for="group in skillGroups"
@@ -141,19 +145,17 @@ useSeoMeta({
 						class="flex flex-col gap-1 sm:flex-row sm:gap-4"
 					>
 						<dt class="w-32 shrink-0 text-sm font-medium">{{ group.category }}</dt>
-						<dd class="text-muted-foreground text-sm">{{ group.skills.join(", ") }}</dd>
+						<UiText variant="muted" tag="dd">{{ group.skills.join(", ") }}</UiText>
 					</div>
 				</dl>
 			</section>
 
 			<!-- Achievements -->
 			<section v-if="achievements?.items?.length" class="py-6">
-				<h2 class="text-muted-foreground font-mono text-xs tracking-widest uppercase">
-					Achievements
-				</h2>
-				<ul class="mt-4 flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+				<UiLabel tag="h2">Achievements</UiLabel>
+				<UiText variant="muted" tag="ul" class="mt-4 list-disc pl-5">
 					<li v-for="item in achievements.items" :key="item">{{ item }}</li>
-				</ul>
+				</UiText>
 			</section>
 		</article>
 	</div>
