@@ -123,3 +123,16 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+@media print {
+	.cv-break-after {
+		break-after: page;
+	}
+	.cv-break-before {
+		break-before: page;
+	}
+	article,
+	section {
+		break-inside: auto;
+	}
+}
