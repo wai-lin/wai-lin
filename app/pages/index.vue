@@ -21,8 +21,20 @@ const { data: latestPost } = await useAsyncData("latest-post", () => {
 	return queryCollection("blogs").order("date", "DESC").first();
 });
 
+const { data: education } = await useAsyncData("education-home", () => {
+	return queryCollection("education").all();
+});
+
+const { data: achievements } = await useAsyncData("achievements-home", () => {
+	return queryCollection("achievements").first();
+});
+
 const featured = computed(() => {
 	return (projects.value ?? []).filter((p) => p.featured).slice(0, 3);
+});
+
+const longBio = computed(() => {
+	return profile.value?.longBio?.slice(1) ?? [];
 });
 
 const skillGroups = computed(() => {
@@ -99,6 +111,53 @@ useHead({
 					<span class="font-medium">{{ currentRole.company }}</span>
 					<span class="text-muted-foreground"> &middot; {{ currentRole.period }}</span>
 				</p>
+			</div>
+		</section>
+
+		<!-- About -->
+		<section class="border-border border-b">
+			<div class="mx-auto max-w-5xl px-6 py-16">
+				<div class="max-w-2xl space-y-6 text-lg leading-relaxed text-pretty">
+					<p v-for="(paragraph, i) in longBio" :key="i">
+						{{ paragraph }}
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Education -->
+		<section v-if="education?.length" class="border-border border-b">
+			<div class="mx-auto max-w-5xl px-6 py-16">
+				<h2 class="text-2xl font-semibold tracking-tight">Education</h2>
+				<div class="mt-8 flex flex-col gap-4">
+					<div
+						v-for="edu in education"
+						:key="edu.schoolName"
+						class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between"
+					>
+						<div>
+							<h3 class="font-medium">{{ edu.degree }}</h3>
+							<p class="text-muted-foreground text-sm">{{ edu.schoolName }}</p>
+						</div>
+						<span class="text-muted-foreground font-mono text-xs">{{ edu.year }}</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Achievements -->
+		<section v-if="achievements?.items?.length" class="border-border border-b">
+			<div class="mx-auto max-w-5xl px-6 py-16">
+				<h2 class="text-2xl font-semibold tracking-tight">Achievements</h2>
+				<ul class="text-muted-foreground mt-8 flex flex-col gap-3 text-sm">
+					<li v-for="item in achievements.items" :key="item" class="flex gap-3">
+						<span
+							class="bg-muted-foreground mt-2 size-1 shrink-0 rounded-full"
+							aria-hidden="true"
+						/>
+						<span>{{ item }}</span>
+					</li>
+				</ul>
 			</div>
 		</section>
 
