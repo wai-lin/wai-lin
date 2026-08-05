@@ -23,6 +23,13 @@ export default defineNuxtConfig({
 	css: ["@/assets/css/main.css"],
 	content: {
 		experimental: { sqliteConnector: "native" },
+		build: {
+			markdown: {
+				highlight: {
+					theme: "one-dark-pro",
+				},
+			},
+		},
 	},
 	studio: {
 		repository: {

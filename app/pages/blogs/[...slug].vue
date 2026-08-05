@@ -51,9 +51,7 @@ useSeoMeta({
 			</header>
 
 			<div class="mx-auto max-w-3xl px-6 py-16">
-				<div class="prose leading-loose">
-					<ContentRenderer :value="page" />
-				</div>
+				<ContentRenderer :value="page" />
 
 				<div v-if="nextPost" class="border-border mt-16 border-t pt-8">
 					<UiLabel tag="p">Next up</UiLabel>
