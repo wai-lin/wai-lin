@@ -89,7 +89,7 @@ useSeoMeta({
 						<img
 							src="/portrait.webp"
 							:alt="`Portrait of ${profile.name}`"
-							class="size-full object-cover grayscale"
+							class="size-full object-cover"
 							loading="eager"
 						/>
 					</div>
