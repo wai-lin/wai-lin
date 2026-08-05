@@ -43,6 +43,7 @@ export default defineNuxtConfig({
 					{
 						binding: "DB",
 						database_name: "portfolio",
+						database_id: "58d17796-ee4c-4b77-a961-ed6ba28530c1",
 					},
 				],
 			},
