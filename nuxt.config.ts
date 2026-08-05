@@ -51,6 +51,9 @@ export default defineNuxtConfig({
 		cloudflare: {
 			deployConfig: true,
 			wrangler: {
+				vars: {
+					NUXT_STUDIO_AUTH_GITHUB_CLIENT_ID: "Ov23licSVnF8B1H5H4en",
+				},
 				observability: {
 					enabled: true,
 				},
