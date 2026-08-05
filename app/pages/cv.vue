@@ -47,9 +47,6 @@ useSeoMeta({
 		>
 			<div>
 				<p class="text-accent font-mono text-xs tracking-widest uppercase">Curriculum Vitae</p>
-				<p class="text-muted-foreground mt-2 text-sm">
-					A one-page summary, ready for job applications.
-				</p>
 			</div>
 			<DownloadCvButton />
 		</div>

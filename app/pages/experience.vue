@@ -33,7 +33,7 @@ useSeoMeta({
 						class="border-border relative border-l pb-12 pl-8 last:pb-0 md:pl-12"
 					>
 						<span
-							class="border-background bg-accent absolute top-1.5 -left-[6px] size-3 rounded-full border-2"
+							class="border-background bg-accent absolute top-1.5 -left-1.5 size-3 rounded-full border-2"
 							aria-hidden="true"
 						/>
 						<div class="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
