@@ -13,6 +13,7 @@ groups:
   - category: Backend
     description: Designing services that stay reliable under load.
     skills:
+      - Hono
       - Nest.js
       - Express.js
       - SQLite
