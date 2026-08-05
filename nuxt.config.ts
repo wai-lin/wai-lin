@@ -23,6 +23,10 @@ export default defineNuxtConfig({
 	css: ["@/assets/css/main.css"],
 	content: {
 		experimental: { sqliteConnector: "native" },
+		database: {
+			type: "d1",
+			bindingName: "DB",
+		},
 		build: {
 			markdown: {
 				highlight: {
