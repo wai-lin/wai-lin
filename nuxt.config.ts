@@ -58,7 +58,7 @@ export default defineNuxtConfig({
 		preset: "cloudflare_module",
 		prerender: {
 			routes: ["/"],
-			crawlLinks: true,
+			// crawlLinks: true,
 		},
 		cloudflare: {
 			deployConfig: true,
