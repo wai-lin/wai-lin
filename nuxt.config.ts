@@ -17,8 +17,25 @@ export default defineNuxtConfig({
 	content: {
 		experimental: { sqliteConnector: "native" },
 	},
+	studio: {
+		repository: {
+			provider: "github",
+			owner: "wai-lin",
+			repo: "wai-lin",
+			branch: "main",
+		},
+		git: {
+			commit: {
+				messagePrefix: "content:",
+			},
+		},
+	},
 	nitro: {
 		preset: "cloudflare_module",
+		prerender: {
+			routes: ["/"],
+			crawlLinks: true,
+		},
 		cloudflare: {
 			deployConfig: true,
 			wrangler: {
