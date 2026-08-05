@@ -1,0 +1,12 @@
+slug: chorus
+name: Chorus
+tagline: Realtime code review for small teams
+description: A lightweight review tool that turns pull requests into live, threaded conversations with inline suggestions and presence.
+year: "2020"
+role: Contributor
+stack:
+  - Vue
+  - Node.js
+  - WebSockets
+featured: false
+href: "#"

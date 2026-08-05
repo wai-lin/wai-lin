@@ -1,19 +1,37 @@
 <script setup lang="ts">
 import { MapPin, Mail } from "@lucide/vue";
 
+const { data: profile } = await useAsyncData("profile-cv", () => {
+	return queryCollection("profile").first();
+});
+
+const { data: experiences } = await useAsyncData("experiences-cv", () => {
+	return queryCollection("experiences").all();
+});
+
+const { data: skills } = await useAsyncData("skills-cv", () => {
+	return queryCollection("skills").first();
+});
+
+const skillGroups = computed(() => {
+	return skills.value?.groups ?? [];
+});
+
 useHead({
-	title: `CV — ${profile.name}`,
+	title: computed(() => `CV — ${profile.value?.name}`),
 	meta: [
 		{
 			name: "description",
-			content: `Curriculum vitae for ${profile.name}, ${profile.role}.`,
+			content: computed(() =>
+				profile.value ? `Curriculum vitae for ${profile.value.name}, ${profile.value.role}.` : "",
+			),
 		},
 	],
 });
 </script>
 
 <template>
-	<div class="mx-auto max-w-3xl px-6 py-12 md:py-16 print:py-0">
+	<div v-if="profile" class="mx-auto max-w-3xl px-6 py-12 md:py-16 print:py-0">
 		<!-- Action bar (hidden when printing) -->
 		<div
 			class="border-border mb-10 flex flex-col gap-4 border-b pb-8 sm:flex-row sm:items-center sm:justify-between print:hidden"

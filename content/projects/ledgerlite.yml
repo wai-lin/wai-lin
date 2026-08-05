@@ -1,0 +1,13 @@
+slug: ledgerlite
+name: LedgerLite
+tagline: Open-source double-entry accounting engine
+description: A tiny, dependency-free accounting core with a friendly API. Handles multi-currency, immutable ledgers and financial reporting. Used by several indie SaaS products.
+year: "2023"
+role: Maintainer
+stack:
+  - TypeScript
+  - Node.js
+  - SQLite
+featured: true
+href: "#"
+repo: https://github.com

@@ -1,4 +1,12 @@
 <script setup lang="ts">
+const { data: skills } = await useAsyncData("skills", () => {
+	return queryCollection("skills").first();
+});
+
+const skillGroups = computed(() => {
+	return skills.value?.groups ?? [];
+});
+
 useHead({
 	title: "Skills",
 	meta: [

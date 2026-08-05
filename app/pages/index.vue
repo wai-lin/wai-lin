@@ -1,17 +1,45 @@
 <script setup lang="ts">
 import { ArrowUpRight, ArrowRight } from "@lucide/vue";
 
-const featured = projects.filter((p) => p.featured).slice(0, 3);
-const latestPost = posts[0];
-const currentRole = experiences[0];
+const { data: profile } = await useAsyncData("profile", () => {
+	return queryCollection("profile").first();
+});
+
+const { data: experiences } = await useAsyncData("experiences-home", () => {
+	return queryCollection("experiences").all();
+});
+
+const { data: projects } = await useAsyncData("projects-home", () => {
+	return queryCollection("projects").all();
+});
+
+const { data: skills } = await useAsyncData("skills-home", () => {
+	return queryCollection("skills").first();
+});
+
+const { data: latestPost } = await useAsyncData("latest-post", () => {
+	return queryCollection("blogs").order("date", "DESC").first();
+});
+
+const featured = computed(() => {
+	return (projects.value ?? []).filter((p) => p.featured).slice(0, 3);
+});
+
+const currentRole = computed(() => {
+	return experiences.value?.[0];
+});
+
+const skillGroups = computed(() => {
+	return skills.value?.groups ?? [];
+});
 
 useHead({
-	title: `${profile.name} — ${profile.role}`,
+	title: computed(() => `${profile.value?.name} — ${profile.value?.role}`),
 });
 </script>
 
 <template>
-	<main>
+	<main v-if="profile">
 		<!-- Hero -->
 		<section class="border-border border-b">
 			<div
@@ -65,7 +93,7 @@ useHead({
 		</section>
 
 		<!-- Currently -->
-		<section class="border-border border-b">
+		<section v-if="currentRole" class="border-border border-b">
 			<div
 				class="mx-auto flex max-w-5xl flex-col gap-2 px-6 py-6 sm:flex-row sm:items-center sm:justify-between"
 			>
@@ -157,7 +185,7 @@ useHead({
 		</section>
 
 		<!-- Latest writing -->
-		<section>
+		<section v-if="latestPost" class="border-border border-b">
 			<div class="mx-auto max-w-5xl px-6 py-16">
 				<div class="flex items-end justify-between">
 					<h2 class="text-2xl font-semibold tracking-tight">Latest writing</h2>
@@ -171,7 +199,7 @@ useHead({
 				</div>
 
 				<NuxtLink
-					:to="`/blogs/${latestPost.slug}`"
+					:to="latestPost.path"
 					class="group border-border bg-card hover:bg-secondary mt-8 flex flex-col gap-3 rounded-xl border p-8 transition-colors"
 				>
 					<div class="text-muted-foreground flex items-center gap-3 font-mono text-xs">
@@ -182,7 +210,7 @@ useHead({
 					<h3 class="group-hover:text-accent text-xl font-semibold tracking-tight text-balance">
 						{{ latestPost.title }}
 					</h3>
-					<p class="text-muted-foreground max-w-2xl text-pretty">{{ latestPost.excerpt }}</p>
+					<p class="text-muted-foreground max-w-2xl text-pretty">{{ latestPost.description }}</p>
 				</NuxtLink>
 			</div>
 		</section>

@@ -1,0 +1,15 @@
+company: Northwind Labs
+role: Staff Software Engineer
+period: "2022 — Present"
+location: Berlin (Remote)
+summary: Lead engineer on the core platform team, owning the frontend architecture and shared component systems used across five product surfaces.
+highlights:
+  - Migrated a legacy monolith to a modular Next.js architecture, cutting page load times by 46%.
+  - Designed a design-token driven component library adopted by 30+ engineers.
+  - Introduced end-to-end type safety across the API boundary, reducing production incidents by a third.
+stack:
+  - TypeScript
+  - Next.js
+  - PostgreSQL
+  - tRPC
+  - AWS

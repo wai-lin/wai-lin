@@ -1,0 +1,13 @@
+slug: terra-cli
+name: Terra CLI
+tagline: A friendlier command line for cloud infra
+description: A developer tool that wraps common infrastructure workflows into a guided, interactive CLI experience with sane defaults and helpful errors.
+year: "2022"
+role: Creator
+stack:
+  - Go
+  - Cobra
+  - Terraform
+featured: false
+href: "#"
+repo: https://github.com

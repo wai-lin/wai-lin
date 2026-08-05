@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const { data: experiences } = await useAsyncData("experiences", () => {
+	return queryCollection("experiences").all();
+});
+
 useHead({
 	title: "Experience",
 	meta: [
@@ -68,7 +72,7 @@ useHead({
 								{{ tech }}
 							</span>
 						</div>
-						<span class="sr-only">{{ `Position ${index + 1} of ${experiences.length}` }}</span>
+						<span class="sr-only">{{ `Position ${index + 1} of ${experiences?.length}` }}</span>
 					</li>
 				</ol>
 			</div>

@@ -1,0 +1,12 @@
+slug: notewell
+name: Notewell
+tagline: Markdown notes with local-first sync
+description: A minimalist note-taking app with a plain-text core, keyboard-driven navigation and conflict-free replicated sync across devices.
+year: "2021"
+role: Creator
+stack:
+  - React
+  - CRDTs
+  - IndexedDB
+featured: false
+href: "#"

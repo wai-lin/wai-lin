@@ -1,26 +1,37 @@
 <script setup lang="ts">
 import { ArrowRight } from "@lucide/vue";
 
-const facts = [
-	{ label: "Based in", value: profile.location },
-	{ label: "Focus", value: "Full-stack product engineering" },
-	{ label: "Experience", value: "8+ years shipping software" },
-	{ label: "Status", value: profile.availability },
-];
+const { data: profile } = await useAsyncData("profile-about", () => {
+	return queryCollection("profile").first();
+});
+
+const facts = computed(() => {
+	if (!profile.value) return [];
+	return [
+		{ label: "Based in", value: profile.value.location },
+		{ label: "Focus", value: "Full-stack product engineering" },
+		{ label: "Experience", value: "8+ years shipping software" },
+		{ label: "Status", value: profile.value.availability },
+	];
+});
 
 useHead({
 	title: "About",
 	meta: [
 		{
 			name: "description",
-			content: `Learn more about ${profile.name}, a ${profile.role.toLowerCase()} based in ${profile.location}.`,
+			content: computed(() =>
+				profile.value
+					? `Learn more about ${profile.value.name}, a ${profile.value.role.toLowerCase()} based in ${profile.value.location}.`
+					: "",
+			),
 		},
 	],
 });
 </script>
 
 <template>
-	<main>
+	<main v-if="profile">
 		<PageHeader eyebrow="About" title="A little about me" :description="profile.shortBio" />
 
 		<section>

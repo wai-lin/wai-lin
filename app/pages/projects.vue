@@ -1,8 +1,17 @@
 <script setup lang="ts">
 import { ArrowUpRight, Code } from "@lucide/vue";
 
-const featured = projects.filter((p) => p.featured);
-const others = projects.filter((p) => !p.featured);
+const { data: projects } = await useAsyncData("projects", () => {
+	return queryCollection("projects").all();
+});
+
+const featured = computed(() => {
+	return (projects.value ?? []).filter((p) => p.featured);
+});
+
+const others = computed(() => {
+	return (projects.value ?? []).filter((p) => !p.featured);
+});
 
 useHead({
 	title: "Projects",

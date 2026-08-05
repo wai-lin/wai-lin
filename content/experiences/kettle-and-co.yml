@@ -1,0 +1,14 @@
+company: Kettle & Co.
+role: Software Engineer
+period: "2017 — 2019"
+location: London
+summary: Full-stack engineer at a fintech startup building payment and reconciliation tooling for small businesses.
+highlights:
+  - Built the invoicing product from zero to first paying customers.
+  - Implemented a background job system processing millions of transactions monthly.
+  - Owned the CI/CD pipeline and cut deploy times from 25 minutes to under 4.
+stack:
+  - Ruby on Rails
+  - React
+  - Redis
+  - Stripe

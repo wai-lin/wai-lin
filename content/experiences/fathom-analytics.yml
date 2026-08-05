@@ -1,0 +1,14 @@
+company: Fathom Analytics
+role: Senior Frontend Engineer
+period: "2019 — 2022"
+location: Amsterdam
+summary: Built the real-time analytics dashboard and data visualization layer serving thousands of businesses.
+highlights:
+  - Shipped a streaming charts engine handling 10k+ live data points without dropped frames.
+  - Led the accessibility overhaul that brought the product to WCAG 2.1 AA compliance.
+  - Reduced bundle size by 38% through aggressive code-splitting and dependency audits.
+stack:
+  - React
+  - D3
+  - WebSockets
+  - Node.js

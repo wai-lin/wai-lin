@@ -7,9 +7,6 @@ export default defineNuxtConfig({
 	modules: ["@nuxt/content", "nuxt-studio"],
 	vite: {
 		plugins: [tailwindcss()],
-		optimizeDeps: {
-			// include: ["@nuxtjs/mdc"],
-		},
 	},
 	css: ["@/assets/css/main.css"],
 	content: {

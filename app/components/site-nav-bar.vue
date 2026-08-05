@@ -16,6 +16,10 @@ const links = [
 const route = useRoute();
 const open = ref(false);
 
+const { data: profile } = await useAsyncData("profile-nav", () => {
+	return queryCollection("profile").first();
+});
+
 function isActive(href: string) {
 	return href === "/" ? route.path === "/" : route.path.startsWith(href);
 }
@@ -27,8 +31,8 @@ function isActive(href: string) {
 	>
 		<nav aria-label="Primary" class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
 			<NuxtLink to="/" class="group flex flex-col leading-tight">
-				<span class="text-sm font-semibold tracking-tight">{{ profile.name }}</span>
-				<span class="text-muted-foreground font-mono text-xs">{{ profile.role }}</span>
+				<span class="text-sm font-semibold tracking-tight">{{ profile?.name }}</span>
+				<span class="text-muted-foreground font-mono text-xs">{{ profile?.role }}</span>
 			</NuxtLink>
 
 			<ul class="hidden items-center gap-1 md:flex">

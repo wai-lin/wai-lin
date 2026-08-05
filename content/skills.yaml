@@ -1,0 +1,37 @@
+groups:
+  - category: Languages
+    description: The tools I reach for to express ideas in code.
+    skills:
+      - TypeScript
+      - JavaScript
+      - Go
+      - Rust
+      - Python
+      - SQL
+  - category: Frontend
+    description: Building interfaces that feel fast and considered.
+    skills:
+      - React
+      - Next.js
+      - Tailwind CSS
+      - Vue
+      - Framer Motion
+      - Accessibility
+  - category: Backend
+    description: Designing services that stay reliable under load.
+    skills:
+      - Node.js
+      - PostgreSQL
+      - Redis
+      - tRPC
+      - GraphQL
+      - REST
+  - category: Infrastructure
+    description: Shipping and operating software with confidence.
+    skills:
+      - AWS
+      - Vercel
+      - Docker
+      - Terraform
+      - CI/CD
+      - Observability

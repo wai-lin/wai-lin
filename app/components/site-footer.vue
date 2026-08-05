@@ -1,5 +1,9 @@
 <script setup lang="ts">
 const year = new Date().getFullYear();
+
+const { data: profile } = await useAsyncData("profile-footer", () => {
+	return queryCollection("profile").first();
+});
 </script>
 
 <template>
@@ -12,6 +16,7 @@ const year = new Date().getFullYear();
 					</p>
 					<p class="mt-3 text-lg text-balance">Have a project in mind or just want to say hello?</p>
 					<a
+						v-if="profile"
 						:href="`mailto:${profile.email}`"
 						class="text-accent mt-3 inline-block text-sm font-medium hover:underline"
 					>
@@ -21,7 +26,7 @@ const year = new Date().getFullYear();
 
 				<nav aria-label="Social" class="grid grid-cols-2 gap-x-12 gap-y-2">
 					<a
-						v-for="social in profile.socials"
+						v-for="social in profile?.socials"
 						:key="social.label"
 						:href="social.href"
 						target="_blank"
@@ -37,11 +42,13 @@ const year = new Date().getFullYear();
 			<div
 				class="border-border text-muted-foreground mt-12 flex flex-col gap-4 border-t pt-6 text-xs sm:flex-row sm:items-center sm:justify-between"
 			>
-				<p>&copy; {{ year }} {{ profile.name }}. Built with Nuxt.</p>
+				<p>&copy; {{ year }} {{ profile?.name }}. Built with Nuxt.</p>
 				<div class="flex gap-6">
 					<NuxtLink to="/projects" class="hover:text-foreground">Projects</NuxtLink>
 					<NuxtLink to="/blogs" class="hover:text-foreground">Blog</NuxtLink>
-					<a :href="`mailto:${profile.email}`" class="hover:text-foreground">Contact</a>
+					<a v-if="profile" :href="`mailto:${profile.email}`" class="hover:text-foreground"
+						>Contact</a
+					>
 				</div>
 			</div>
 		</div>

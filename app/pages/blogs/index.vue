@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ArrowRight } from "@lucide/vue";
 
-const sorted = [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const { data: posts } = await useAsyncData("blogs-list", () => {
+	return queryCollection("blogs").order("date", "DESC").all();
+});
 
 useHead({
 	title: "Blog",
@@ -26,9 +28,9 @@ useHead({
 		<section>
 			<div class="mx-auto max-w-5xl px-6 py-16">
 				<ul class="divide-border border-border divide-y rounded-xl border">
-					<li v-for="post in sorted" :key="post.slug">
+					<li v-for="post in posts" :key="post.path">
 						<NuxtLink
-							:to="`/blogs/${post.slug}`"
+							:to="post.path"
 							class="group hover:bg-secondary flex flex-col gap-3 p-8 transition-colors"
 						>
 							<div
@@ -41,7 +43,7 @@ useHead({
 							<h2 class="group-hover:text-accent text-xl font-semibold tracking-tight text-balance">
 								{{ post.title }}
 							</h2>
-							<p class="text-muted-foreground max-w-2xl text-pretty">{{ post.excerpt }}</p>
+							<p class="text-muted-foreground max-w-2xl text-pretty">{{ post.description }}</p>
 							<div class="mt-2 flex items-center justify-between">
 								<div class="flex flex-wrap gap-1.5">
 									<span
