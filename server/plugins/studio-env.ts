@@ -11,8 +11,6 @@ export default defineNitroPlugin(() => {
 	const envMap: Record<string, string | undefined> = {
 		STUDIO_GITHUB_CLIENT_ID: studioAuth.auth.github?.clientId,
 		STUDIO_GITHUB_CLIENT_SECRET: studioAuth.auth.github?.clientSecret,
-		NUXT_STUDIO_GITHUB_CLIENT_ID: studioAuth.auth.github?.clientId,
-		NUXT_STUDIO_GITHUB_CLIENT_SECRET: studioAuth.auth.github?.clientSecret,
 	};
 
 	for (const [key, value] of Object.entries(envMap)) {

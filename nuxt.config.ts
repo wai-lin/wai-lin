@@ -62,7 +62,6 @@ export default defineNuxtConfig({
 			wrangler: {
 				vars: {
 					STUDIO_AUTH_GITHUB_CLIENT_ID: "Ov23licSVnF8B1H5H4en",
-					NUXT_STUDIO_AUTH_GITHUB_CLIENT_ID: "Ov23licSVnF8B1H5H4en",
 				},
 				observability: {
 					enabled: true,
