@@ -44,8 +44,8 @@ const skillGroups = computed(() => {
 useSeoMeta({
 	title: computed(() => `${profile.value?.name} — ${profile.value?.role}`),
 	ogTitle: computed(() => `${profile.value?.name} — ${profile.value?.role}`),
-	description: computed(() => profile.value?.shortBio),
-	ogDescription: computed(() => profile.value?.shortBio),
+	description: computed(() => profile.value?.longBio?.[0]),
+	ogDescription: computed(() => profile.value?.longBio?.[0]),
 	ogImage: "/og-default.png",
 	twitterCard: "summary_large_image",
 });
@@ -64,7 +64,7 @@ useSeoMeta({
 					<UiText variant="muted" tag="p" class="mt-3 font-mono">
 						{{ profile.role }} &middot; {{ profile.location }}
 					</UiText>
-					<UiText class="mt-6 max-w-xl">{{ profile.shortBio }}</UiText>
+					<UiText class="mt-6 max-w-xl">{{ profile.longBio[0] }}</UiText>
 					<div class="mt-8 flex flex-wrap items-center gap-3">
 						<NuxtLink
 							to="/projects"

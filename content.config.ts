@@ -12,7 +12,6 @@ export default defineContentConfig({
 				location: z.string(),
 				availability: z.string(),
 				email: z.string(),
-				shortBio: z.string(),
 				longBio: z.array(z.string()),
 				socials: z.array(
 					z.object({
@@ -32,7 +31,6 @@ export default defineContentConfig({
 				role: z.string(),
 				period: z.string(),
 				location: z.string(),
-				summary: z.string(),
 				highlights: z.array(z.string()),
 				stack: z.array(z.string()),
 			}),

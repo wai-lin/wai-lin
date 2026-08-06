@@ -95,7 +95,7 @@ useSeoMeta({
 						v-for="(job, index) in experiences"
 						:key="`${job.company}-${job.period}`"
 						:class="{
-							'cv-break-after': index === 2,
+							'cv-break-after': index === 3,
 						}"
 					>
 						<div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
@@ -105,7 +105,6 @@ useSeoMeta({
 							</UiTitle>
 							<UiLabel tag="span">{{ job.period }}</UiLabel>
 						</div>
-						<UiText variant="body" class="mt-1 leading-normal">{{ job.summary }}</UiText>
 						<UiText
 							variant="muted"
 							tag="ul"
@@ -122,7 +121,7 @@ useSeoMeta({
 			</section>
 
 			<!-- Education -->
-			<section v-if="education?.length" class="border-border cv-break-before border-b py-6">
+			<section v-if="education?.length" class="border-border border-b py-6">
 				<UiLabel tag="h2">Education</UiLabel>
 				<div class="mt-4 flex flex-col gap-4">
 					<div v-for="edu in education" :key="edu.schoolName">

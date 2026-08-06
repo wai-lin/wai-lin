@@ -46,8 +46,6 @@ useSeoMeta({
 							<UiLabel tag="span" class="md:whitespace-nowrap">{{ exp.period }}</UiLabel>
 						</div>
 
-						<UiText class="mt-4 max-w-2xl">{{ exp.summary }}</UiText>
-
 						<UiText variant="muted" tag="ul" class="mt-4 max-w-2xl space-y-2">
 							<li v-for="highlight in exp.highlights" :key="highlight" class="flex gap-3">
 								<span
