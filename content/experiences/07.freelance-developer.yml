@@ -1,13 +1,20 @@
 company: ""
-role: Freelance Developer
+role: Freelance Web Developer
 period: "April 2025 - Present"
-location: ""
-summary: "Consulted a small development team. Developed a Nuxt.JS based website with Firebase for a client. Maintained an existing student booking system for the Ministry of Higher Education, Science, Research and Innovation Thailand using React.JS."
+location: "Remote"
 highlights:
-  - Consulted a small development team
+  - Consulted a development team
+  - Projects from EU using Laravel
+  - Implemented AI RAG for marketing campaign websites
   - Developed a Nuxt.JS based website with Firebase for a client
   - Maintained student booking system for Ministry of Higher Education Thailand
 stack:
   - Nuxt.js
   - React.js
+  - Next.js
+  - Laravel
+  - TailwindCSS
+  - AI RAG
+  - Hono.js
+  - Cloudflare
   - Firebase
