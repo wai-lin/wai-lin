@@ -87,6 +87,20 @@ useSeoMeta({
 				<UiText class="mt-3">{{ profile.longBio[0] }}</UiText>
 			</section>
 
+			<!-- Education -->
+			<section v-if="education?.length" class="border-border border-b py-6">
+				<UiLabel tag="h2">Education</UiLabel>
+				<div class="mt-4 flex flex-col gap-4">
+					<div v-for="edu in education" :key="edu.schoolName">
+						<div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
+							<UiTitle :level="3" class="font-medium tracking-normal">{{ edu.degree }}</UiTitle>
+							<UiLabel tag="span">{{ edu.year }}</UiLabel>
+						</div>
+						<UiText variant="muted">{{ edu.schoolName }}</UiText>
+					</div>
+				</div>
+			</section>
+
 			<!-- Experience -->
 			<section class="border-border border-b py-6">
 				<UiLabel tag="h2">Experience</UiLabel>
@@ -95,7 +109,7 @@ useSeoMeta({
 						v-for="(job, index) in experiences"
 						:key="`${job.company}-${job.period}`"
 						:class="{
-							'cv-break-after': index === 3,
+							'cv-break-before': index === 2,
 						}"
 					>
 						<div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
@@ -120,22 +134,8 @@ useSeoMeta({
 				</div>
 			</section>
 
-			<!-- Education -->
-			<section v-if="education?.length" class="border-border border-b py-6">
-				<UiLabel tag="h2">Education</UiLabel>
-				<div class="mt-4 flex flex-col gap-4">
-					<div v-for="edu in education" :key="edu.schoolName">
-						<div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
-							<UiTitle :level="3" class="font-medium tracking-normal">{{ edu.degree }}</UiTitle>
-							<UiLabel tag="span">{{ edu.year }}</UiLabel>
-						</div>
-						<UiText variant="muted">{{ edu.schoolName }}</UiText>
-					</div>
-				</div>
-			</section>
-
 			<!-- Skills -->
-			<section class="border-border border-b py-6">
+			<section class="border-border cv-break-before border-b py-6">
 				<UiLabel tag="h2">Skills</UiLabel>
 				<dl class="mt-4 flex flex-col gap-3">
 					<div
