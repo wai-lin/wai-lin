@@ -3,7 +3,7 @@ email: dev.wailin@gmail.com
 image: /portrait.webp
 location: Thailand
 longBio:
-  - I'm Wai Lin Aung, or Aung for short, from Myanmar - a web developer and tote-bag enthusiast with 8+ years crafting WebUIs and JS libraries. I tinker with the inner workings of build tools like Vite, Rolldown, and Rollup, and explore functional programming languages like Gleam and MoonBit. I code in both VSCode and Neovim, and when I'm not building things, you'll find me cooking or playing badminton.
+  - I'm Wai Lin Aung, or Aung for short, from Myanmar - a web developer and tote-bag enthusiast with 8+ years crafting WebUIs and JS libraries. I tinker with the inner workings of build tools like Vite, Rolldown, and Rollup, and explore functional programming languages like Gleam. I code in both VSCode and Neovim, and when I'm not building things, you'll find me cooking or playing badminton.
   - Passionate about Vue.js, React.js, TypeScript, and modern web development. Currently freelancing while pursuing a Master's degree, I build scalable applications with Node.js and cloud platforms.
   - Expert in creating design systems, leading development teams, and mentoring engineers to excellence.
 name: Wai Lin Aung
